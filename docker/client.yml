@@ -1,0 +1,70 @@
+version: "3"
+services:
+    mysql:
+        networks:
+            - captn-client-network
+
+    airt-service:
+        image: $AIRT_SERVER_DOCKER
+        hostname: $USER-airt-service
+        container_name: $USER-airt-service
+        ports:
+            - "$CAPTN_TB_PORT:6006"
+            - "${PORT_PREFIX}8080:8080"
+        networks:
+            - captn-client-network
+        env_file:
+            - ../.env.dev.config
+            - ../.env.dev.secrets
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                    - driver: nvidia
+                      device_ids: ['all']
+                      capabilities: [gpu]
+        depends_on:
+            - mysql
+        
+    captn-client:
+        image: $CAPTN_CLIENT_DOCKER
+        hostname: $USER-captn-client
+        container_name: $USER-captn-client
+        volumes:
+            - ../../captn-client:/work/captn-client
+            - ./logo:$HOME/logo
+            - /etc/passwd:/etc/passwd
+            - /etc/group:/etc/group
+            - /etc/shadow:/etc/shadow
+            - $HOME/.ssh:$HOME/.ssh
+            - $HOME/.gitconfig:$HOME/.gitconfig
+            - $HOME/.aws:$HOME/.aws
+        environment:
+            - JUPYTER_CONFIG_DIR=$HOME/.jupyter
+            - USER
+            - USERNAME
+            - CAPTN_SERVER_URL=$CAPTN_SERVER_URL
+            - CAPTN_SERVICE_USERNAME=$CAPTN_SERVICE_USERNAME
+            - CAPTN_SERVICE_PASSWORD=$AIRT_SERVICE_SUPER_USER_PASSWORD
+            - AIRT_SERVICE_SUPER_USER=$AIRT_SERVICE_SUPER_USER
+            - PRESERVE_ENVS=$PRESERVE_ENVS
+        env_file:
+            - ../.env.dev.config
+            - ../.env.dev.secrets
+        # command: ["/bin/bash", "-c", "chown -R $USER /home/$USER && sudo -u $USER /var/user_startup.sh && sudo --preserve-env=\"$PRESERVE_ENVS\" -u $USER jupyter notebook --ip 0.0.0.0 --no-browser --allow-root"]
+        command: ["/bin/bash", "-c", "chown -R $USER /home/$USER && sudo -u $USER /var/user_startup.sh && sudo -u $USER jt -t captn -cellw 90% -N -T --logo $HOME/logo/captn-logo-pos-trans.png && sudo --preserve-env=\"$PRESERVE_ENVS\" -u $USER jupyter notebook --ip 0.0.0.0 --no-browser --allow-root"]
+        # command: bash -c "source /etc/bash.bashrc && jt -t captn -cellw 90% -N -T --logo $HOME/logo/captn-logo-pos-trans.png && jupyter notebook --notebook-dir=/tf --ip 0.0.0.0 --no-browser --allow-root" 
+        # command: bash -c "chown -R $USER /home/$USER && sudo -u $USER /var/user_startup.sh && sudo -u $USER source /etc/bash.bashrc && sudo -u $USER jt -t captn -cellw 90% -N -T --logo $HOME/logo/captn-logo-pos-trans.png && sudo --preserve-env=\"$PRESERVE_ENVS\" -u $USER jupyter notebook --ip 0.0.0.0 --no-browser --allow-root"
+        ports:
+            - "$CAPTN_JUPYTER_PORT:8888"
+            - "$AIRT_SERVICE_PORT:6007"
+            - "$CAPTN_DASK_PORT:8787"
+            - "$CAPTN_DOCS_PORT:4000"
+        networks:
+            - captn-client-network
+        depends_on:
+            - airt-service
+networks:
+    captn-client-network:
+        name: "${USER}-captn-client-network"
+
