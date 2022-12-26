@@ -1,0 +1,14 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - ActivateTestingEnvironment.ipynb
+      - CLI.ipynb
+      - CLI_ApiKey.ipynb
+      - CLI_DataBlob.ipynb
+      - CLI_DataSource.ipynb
+      - CLI_Token.ipynb
+      - CLI_User.ipynb
+      - CLI_Version.ipynb
+      - Client.ipynb
+      - Tutorial.ipynb
