@@ -62,9 +62,9 @@ jobs:
     container:
       image: ghcr.io/airtai/airt-service-dev:latest
     env:
-      AIRT_SERVER_URL: "http://airt-service:6006"
-      AIRT_SERVICE_USERNAME: "johndoe"
-      AIRT_SERVICE_PASSWORD: ${{ secrets.CI_AIRT_SERVICE_SUPER_USER_PASSWORD }}
+      CAPTN_SERVER_URL: "http://airt-service:6006"
+      CAPTN_SERVICE_USERNAME: "johndoe"
+      CAPTN_SERVICE_PASSWORD: ${{ secrets.CI_AIRT_SERVICE_SUPER_USER_PASSWORD }}
       AIRT_SERVICE_SUPER_USER: "kumaran"
 
       DB_USERNAME: "root"
