@@ -163,12 +163,6 @@ echo DOCKER_COMPOSE_PROJECT variable set to $DOCKER_COMPOSE_PROJECT
 export AIRT_SERVER_GITLAB_ID=29120234
 echo AIRT_SERVER_GITLAB_ID variable set to $AIRT_SERVER_GITLAB_ID
 
-if test -z "$ACCESS_REP_TOKEN"
-then
-      echo 'ACCESS_REP_TOKEN variable not set, exiting'
-      exit -1
-fi
-
 export URI_ENCODED_FILE_PATH="docker%2Fdependencies%2Eyml"
 echo URI_ENCODED_FILE_PATH variable set to $URI_ENCODED_FILE_PATH
 
