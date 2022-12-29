@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "captn-client"
+  site-url: "https://airtai.github.io/captn-client"
+  description: "Captn client library"
+  repo-branch: main
+  repo-url: "https://github.com/airtai/captn-client"
