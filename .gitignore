@@ -154,7 +154,7 @@ checklink/cookies.txt
 .install_pre_commit_hooks
 _docs/
 _proc/
-
+token
 
 # nbdev_mkdocs
 mkdocs/docs/
