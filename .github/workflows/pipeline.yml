@@ -10,6 +10,9 @@ jobs:
   sast:
     runs-on: ubuntu-22.04
     steps:
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
       - uses: airtai/workflows/nbdev-mkdocs-static-check@main
       # - uses: actions/checkout@v3
       # # This is to fix GIT not liking owner of the checkout dir - https://github.com/actions/runner/issues/2033#issuecomment-1204205989
