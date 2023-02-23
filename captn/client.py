@@ -4,13 +4,12 @@
 __all__ = ['Client', 'DataBlob', 'DataSource', 'User', 'APIKey']
 
 # %% ../notebooks/Client.ipynb 2
-from typing import *
-import types
 import inspect
+import types
+from typing import *
 
-import typer
 import airt
-
+import typer
 from airt.constant import *
 
 # %% ../notebooks/Client.ipynb 4

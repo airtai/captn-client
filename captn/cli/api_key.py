@@ -5,6 +5,7 @@ __all__ = ['app']
 
 # %% ../../notebooks/CLI_ApiKey.ipynb 3
 import airt
+
 from ..client import _fix_cli_doc_string
 
 # %% ../../notebooks/CLI_ApiKey.ipynb 4
