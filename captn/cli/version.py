@@ -4,10 +4,10 @@
 __all__ = ['version', 'app']
 
 # %% ../../notebooks/CLI_Version.ipynb 3
+import airt
 import typer
 
-import airt
-from ..client import _replace_env_var, _fix_cli_doc_string
+from ..client import _fix_cli_doc_string, _replace_env_var
 
 # %% ../../notebooks/CLI_Version.ipynb 4
 from airt.cli.version import version as _version
