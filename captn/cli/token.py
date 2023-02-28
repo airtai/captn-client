@@ -10,7 +10,7 @@ import typer
 from ..client import _fix_cli_doc_string, _replace_env_var
 
 # %% ../../notebooks/CLI_Token.ipynb 4
-from airt.cli.token import token as _token
+from airt._cli.token import token as _token
 
 token = _token
 
