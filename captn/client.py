@@ -10,7 +10,7 @@ from typing import *
 
 import airt
 import typer
-from airt.constant import *
+from airt._constant import *
 
 # %% ../notebooks/Client.ipynb 4
 def _replace_env_var(s: str) -> str:
@@ -45,8 +45,8 @@ def _fix_cli_doc_string(app: typer.Typer, m_name: str):
     for c in app.registered_commands:
         name = c.callback.__name__.replace("-", "_")  # type: ignore
 
-        getattr(getattr(airt.cli, m_name), name).__doc__ = _replace_env_var(
-            getattr(getattr(airt.cli, m_name), name).__doc__
+        getattr(getattr(airt._cli, m_name), name).__doc__ = _replace_env_var(
+            getattr(getattr(airt._cli, m_name), name).__doc__
         )
 
 # %% ../notebooks/Client.ipynb 9
@@ -59,7 +59,7 @@ def _set_global_env_vars(m: types.ModuleType):
                 raise ValueError(f"AIRT_ reference is available in {getattr(m, v)}")
 
 # %% ../notebooks/Client.ipynb 10
-_set_global_env_vars(airt.constant)
+_set_global_env_vars(airt._constant)
 
 from airt.client import Client as _Client
 

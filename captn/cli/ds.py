@@ -9,7 +9,7 @@ import airt
 from ..client import _fix_cli_doc_string
 
 # %% ../../notebooks/CLI_DataSource.ipynb 4
-from airt.cli.ds import app as _app
+from airt._cli.ds import app as _app
 
 app = _app
 

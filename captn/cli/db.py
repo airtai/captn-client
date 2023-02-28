@@ -9,7 +9,7 @@ import airt
 from ..client import _fix_cli_doc_string
 
 # %% ../../notebooks/CLI_DataBlob.ipynb 4
-from airt.cli.db import app as _app
+from airt._cli.db import app as _app
 
 app = _app
 

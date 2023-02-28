@@ -9,7 +9,7 @@ import airt
 from ..client import _fix_cli_doc_string
 
 # %% ../../notebooks/CLI_ApiKey.ipynb 4
-from airt.cli.api_key import app as _app
+from airt._cli.api_key import app as _app
 
 app = _app
 
