@@ -10,7 +10,7 @@ import typer
 from ..client import _fix_cli_doc_string, _replace_env_var
 
 # %% ../../notebooks/CLI_Version.ipynb 4
-from airt.cli.version import version as _version
+from airt._cli.version import version as _version
 
 version = _version
 
