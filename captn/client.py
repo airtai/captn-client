@@ -18,11 +18,9 @@ def _replace_env_var(s: str) -> str:
 
 # %% ../notebooks/Client.ipynb 5
 def _fix_doc_string(cls: Type):
-
     cls.__doc__ = _replace_env_var(cls.__doc__)  # type: ignore
 
     for i in dir(cls):
-
         attr = getattr(cls, i)
 
         if (attr) and (not i.startswith("_")):
