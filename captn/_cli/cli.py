@@ -11,9 +11,9 @@ from contextlib import contextmanager
 import typer
 
 import captn
-from captn.cli import api_key, db, ds, user
-from captn.cli.token import token
-from captn.cli.version import version
+from captn._cli import api_key, db, ds, user
+from captn._cli.token import token
+from captn._cli.version import version
 from captn.client import _replace_env_var
 
 # %% ../../notebooks/CLI.ipynb 5
