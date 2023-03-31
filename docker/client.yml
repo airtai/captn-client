@@ -3,10 +3,7 @@ services:
     mysql:
         networks:
             - captn-client-network
-    zookeeper:
-        networks:
-            - captn-client-network
-    kafka:
+    redpanda:
         networks:
             - captn-client-network
 
@@ -57,7 +54,7 @@ services:
         env_file:
             - ../.env.dev.config
             - ../.env.dev.secrets
-        command: ["/bin/bash", "-c", "chown -R $USER /home/$USER && sudo -u $USER /var/user_startup.sh && sudo -u $USER jt -t captn -cellw 90% -N -T --logo $HOME/logo/captn-logo-pos-trans.png && sudo --preserve-env=\"$PRESERVE_ENVS\" -u $USER jupyter notebook --ip 0.0.0.0 --no-browser --allow-root"]
+        command: ["/bin/bash", "-c", "chown -R $USER /home/$USER && sudo -u $USER /var/user_startup.sh && sudo -u $USER jt -t captn -cellw 90% -N -T --logo $HOME/logo/captn-logo-pos-trans.png && sudo --preserve-env=\"$PRESERVE_ENVS\" -u $USER PATH=\"$PATH:/home/$USER/.local/bin\"  jupyter notebook --ip 0.0.0.0 --no-browser --allow-root"]
         ports:
             - "$CAPTN_JUPYTER_PORT:8888"
             - "$AIRT_SERVICE_PORT:6007"
