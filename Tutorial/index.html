@@ -1,0 +1,1321 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Captn client library">
+      
+      
+        <meta name="author" content="airt.ai">
+      
+      
+        <link rel="canonical" href="https://airtai.github.io/captn-client/Tutorial/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../captn_api_docs/captn/client/">
+      
+      <link rel="icon" href="../overrides/images/compass-outline.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
+    
+    
+      
+        <title>Tutorial - captn</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7a7fce14.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../overrides/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  
+  
+    
+  
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="captn - Tutorial" />
+  <meta property="og:description" content="Captn client library" />
+  <meta property="og:url" content="https://airtai.github.io/captn-client/Tutorial/" />
+  <meta property="og:image" content="https://opengraph.githubassets.com/1672044312.260023/airtai/captn-client" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="captn - Tutorial" />
+  <meta name="twitter:description" content="Captn client library" />
+  <meta name="twitter:image" content="https://opengraph.githubassets.com/1672044312.260023/airtai/captn-client" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="yellow">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="captn" class="md-header__button md-logo" aria-label="captn" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7 17 3.2-6.8L17 7l-3.2 6.8L7 17m5-5.9a.9.9 0 0 0-.9.9.9.9 0 0 0 .9.9.9.9 0 0 0 .9-.9.9.9 0 0 0-.9-.9M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            captn
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/airtai/captn-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    captn-client
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="captn" class="md-nav__button md-logo" aria-label="captn" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7 17 3.2-6.8L17 7l-3.2 6.8L7 17m5-5.9a.9.9 0 0 0-.9.9.9.9 0 0 0 .9.9.9.9 0 0 0 .9-.9.9.9 0 0 0-.9-.9M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8Z"/></svg>
+
+    </a>
+    captn
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/airtai/captn-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    captn-client
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Capt'n python client
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Tutorial
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-connect-and-preprocess-data" class="md-nav__link">
+    1. Connect and preprocess data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-training" class="md-nav__link">
+    2. Training
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../captn_api_docs/captn/client/" class="md-nav__link">
+        captn.client
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../captn_cli_docs/captn/" class="md-nav__link">
+        captn
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHANGELOG/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-connect-and-preprocess-data" class="md-nav__link">
+    1. Connect and preprocess data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-training" class="md-nav__link">
+    2. Training
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tutorial">Tutorial<a class="headerlink" href="#tutorial" title="Permanent link">¤</a></h1>
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+
+<p>This tutorial gives an example of how to use captn services to train a
+model and make predictions.</p>
+<p>We can use the <strong>captn-client</strong> library’s following classes for the task
+at hand:</p>
+<ul>
+<li>
+<p><code>Client</code> for authenticating and accessing the captn service,</p>
+</li>
+<li>
+<p><code>DataBlob</code> for encapsulating the data from sources like CSV files,
+  databases, or AWS S3 bucket, and</p>
+</li>
+<li>
+<p><code>DataSource</code> for managing datasources and training the models in the
+  captn service.</p>
+</li>
+</ul>
+<p>We import them from <strong>captn.client</strong> module as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Importing necessary libraries</span>
+<span class="kn">from</span> <span class="nn">captn.client</span> <span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">DataBlob</span><span class="p">,</span> <span class="n">DataSource</span>
+</code></pre></div>
+<h3 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">¤</a></h3>
+<p>To access the captn service, you must first create a developer account.
+Please fill out the signup form below to get one:</p>
+<ul>
+<li><a href="https://bit.ly/3I4cNuv">https://bit.ly/3I4cNuv</a></li>
+</ul>
+<p>After successful verification, you will receive an email with the
+username and password for the developer account.</p>
+<p>Once you have the credentials, use them to get an access token by
+calling <code>Client.get_token</code> method. It is necessary to get an access
+token; otherwise, you won’t be able to access all of the captn service’s
+APIs. You can either pass the username, password, and server address as
+parameters to the <code>Client.get_token</code> method or store them in the
+environment variables <strong>CAPTN_SERVICE_USERNAME</strong>,
+<strong>CAPTN_SERVICE_PASSWORD</strong>, and <strong>CAPTN_SERVER_URL</strong>.</p>
+<p>In addition to the regular authentication with credentials, you can also
+enable multi-factor authentication (MFA) and single sign-on (SSO) for
+generating tokens.</p>
+<p>To help protect your account, we recommend that you enable multi-factor
+authentication (MFA). MFA provides additional security by requiring you
+to provide unique verification code (OTP) in addition to your regular
+sign-in credentials when performing critical operations.</p>
+<p>Your account can be configured for MFA in just two easy steps:</p>
+<ol>
+<li>
+<p>To begin, you need to enable MFA for your account by calling the
+    <code>User.enable_mfa</code> method, which will generate a QR code. You can
+    then scan the QR code with an authenticator app, such as Google
+    Authenticator and follow the on-device instructions to finish the
+    setup in your smartphone.</p>
+</li>
+<li>
+<p>Finally, activate MFA for your account by calling
+    <code>User.activate_mfa</code> and passing the dynamically generated six-digit
+    verification code from your smartphone’s authenticator app.</p>
+</li>
+</ol>
+<p>You can also disable MFA for your account at any time by calling the
+method <code>User.disable_mfa</code> method.</p>
+<p>Single sign-on (SSO) can be enabled for your account in three simple
+steps:</p>
+<ol>
+<li>
+<p>Enable the SSO for a provider by calling the <code>User.enable_sso</code>
+    method with the SSO provider name and an email address. At the
+    moment, we only support “google” and “github” as SSO providers. We
+    intend to support additional SSO providers in future releases.</p>
+</li>
+<li>
+<p>Before you can start generating new tokens with SSO, you must first
+    authenticate with the SSO provider. Call the <code>Client.get_token</code> with
+    the same SSO provider you have enabled in the step above to generate
+    an SSO authorization URL. Please copy and paste it into your
+    preferred browser and complete the authentication process with the
+    SSO provider.</p>
+</li>
+<li>
+<p>After successfully authenticating with the SSO provider, call the
+    <code>Client.set_sso_token</code> method to generate a new token and use it
+    automatically in all future interactions with the captn server.</p>
+</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In the below example, the username, password, and server address are stored in <strong>CAPTN_SERVICE_USERNAME</strong>, <strong>CAPTN_SERVICE_PASSWORD</strong>, and <strong>CAPTN_SERVER_URL</strong> environment variables.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Authenticate</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="1-connect-and-preprocess-data">1. Connect and preprocess data<a class="headerlink" href="#1-connect-and-preprocess-data" title="Permanent link">¤</a></h3>
+<p><code>DataBlob</code> objects are used to encapsulate data access. Currently, we
+support:</p>
+<ul>
+<li>
+<p>access for local CSV files,</p>
+</li>
+<li>
+<p>database access for MySql, ClickHouse, and</p>
+</li>
+<li>
+<p>files stored in cloud storage like AWS S3 and Azure Blob Storage.</p>
+</li>
+</ul>
+<p>We intend to support additional databases and storage mediums in future
+releases.</p>
+<p>To create a <code>DataBlob</code> object, use one of the DataBlob class’s from_*
+methods. Check out the <code>DataBlob</code> class documentation for more
+information.</p>
+<p>In this example, the input data is a CSV file stored in an AWS S3
+bucket. Before you can use the data to train a model, it must be
+uploaded to the captn server. To upload data from an AWS S3 bucket to
+the captn server, use the DataBlob class’s <code>DataBlob.from_s3</code> method.</p>
+<p>In our example, we will be using the captn APIs to load and preprocess a
+sample CSV file stored in an AWS S3 bucket.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Pull the data from an AWS S3 bucket to the captn server</span>
+<span class="n">data_blob</span> <span class="o">=</span> <span class="n">DataBlob</span><span class="o">.</span><span class="n">from_s3</span><span class="p">(</span><span class="n">uri</span><span class="o">=</span><span class="s2">&quot;s3://test-airt-service/sample_gaming_130k&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>The above method will automatically pull the data into the captn server,
+and all calls to the library are asynchronous and return immediately. To
+manage completion, all the <strong>from_</strong>* methods of the DataBlob class
+will return a status object indicating the completion status.
+Alternatively, you can monitor the completion status interactively in a
+progress bar by calling the <code>DataBlob.progress_bar</code> method:</p>
+<div class="highlight"><pre><span></span><code><span class="n">data_blob</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 1/1 [01:36&lt;00:00, 96.17s/it]
+</code></pre></div>
+<p>The next step is to preprocess and prepare the data for training.
+Preprocessing entails creating the index column, sort column, and so on.
+Currently, CSV and Parquet files can be preprocessed. Please use the
+<code>DataBlob.to_datasource</code> method in the DataBlob class for the same. We
+intend to support additional file formats in the future releases.</p>
+<p>The sample data we used in this example doesn’t have the header rows and
+their data types defined.</p>
+<p>The following code creates the necessary headers along with their data
+types and reads only a subset of columns that are required for modeling:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Add header rows</span>
+<span class="n">prefix</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;revenue&quot;</span><span class="p">,</span> <span class="s2">&quot;ad_revenue&quot;</span><span class="p">,</span> <span class="s2">&quot;conversion&quot;</span><span class="p">,</span> <span class="s2">&quot;retention&quot;</span><span class="p">]</span>
+<span class="n">days</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">361</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+<span class="n">dtype</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;game_name&quot;</span><span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;platform&quot;</span><span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;user_type&quot;</span><span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;campaign&quot;</span><span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;adgroup&quot;</span><span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;installs&quot;</span><span class="p">:</span> <span class="s2">&quot;int32&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;spend&quot;</span><span class="p">:</span> <span class="s2">&quot;float32&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">dtype</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="s2">&quot;float32&quot;</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">prefix</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">days</span><span class="p">})</span>
+<span class="n">names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dtype</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+<span class="n">kwargs</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;|&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="n">names</span><span class="p">,</span>
+    <span class="s2">&quot;parse_dates&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;usecols&quot;</span><span class="p">:</span> <span class="n">names</span><span class="p">[:</span><span class="mi">42</span><span class="p">],</span>
+    <span class="s2">&quot;dtype&quot;</span><span class="p">:</span> <span class="n">dtype</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Finally, the above variables are passed to the <code>DataBlob.to_datasource</code>
+method which preprocesses the data and stores it in captn server.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Preprocess and prepare the data for training</span>
+<span class="n">data_source</span> <span class="o">=</span> <span class="n">data_blob</span><span class="o">.</span><span class="n">to_datasource</span><span class="p">(</span>
+    <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;csv&quot;</span><span class="p">,</span> <span class="n">index_column</span><span class="o">=</span><span class="s2">&quot;game_name&quot;</span><span class="p">,</span> <span class="n">sort_by</span><span class="o">=</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span>
+
+<span class="c1"># Display the data preprocessing progress</span>
+<span class="n">data_source</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 1/1 [00:45&lt;00:00, 45.64s/it]
+</code></pre></div>
+<p>When the preprocessing is finished, you can run the following command to
+display the head of the data to ensure everything is fine.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Display the first few rows of preprocessed data.</span>
+<span class="n">data_source</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">style</span>
+</code></pre></div>
+<style type="text/css">
+</style>
+<table id="T_30d09">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_30d09_level0_col0" class="col_heading level0 col0" >date</th>
+      <th id="T_30d09_level0_col1" class="col_heading level0 col1" >platform</th>
+      <th id="T_30d09_level0_col2" class="col_heading level0 col2" >user_type</th>
+      <th id="T_30d09_level0_col3" class="col_heading level0 col3" >network</th>
+      <th id="T_30d09_level0_col4" class="col_heading level0 col4" >campaign</th>
+      <th id="T_30d09_level0_col5" class="col_heading level0 col5" >adgroup</th>
+      <th id="T_30d09_level0_col6" class="col_heading level0 col6" >installs</th>
+      <th id="T_30d09_level0_col7" class="col_heading level0 col7" >spend</th>
+      <th id="T_30d09_level0_col8" class="col_heading level0 col8" >revenue_0</th>
+      <th id="T_30d09_level0_col9" class="col_heading level0 col9" >revenue_1</th>
+      <th id="T_30d09_level0_col10" class="col_heading level0 col10" >revenue_2</th>
+      <th id="T_30d09_level0_col11" class="col_heading level0 col11" >revenue_3</th>
+      <th id="T_30d09_level0_col12" class="col_heading level0 col12" >revenue_4</th>
+      <th id="T_30d09_level0_col13" class="col_heading level0 col13" >revenue_5</th>
+      <th id="T_30d09_level0_col14" class="col_heading level0 col14" >revenue_6</th>
+      <th id="T_30d09_level0_col15" class="col_heading level0 col15" >revenue_7</th>
+      <th id="T_30d09_level0_col16" class="col_heading level0 col16" >revenue_8</th>
+      <th id="T_30d09_level0_col17" class="col_heading level0 col17" >revenue_9</th>
+      <th id="T_30d09_level0_col18" class="col_heading level0 col18" >revenue_10</th>
+      <th id="T_30d09_level0_col19" class="col_heading level0 col19" >revenue_11</th>
+      <th id="T_30d09_level0_col20" class="col_heading level0 col20" >revenue_12</th>
+      <th id="T_30d09_level0_col21" class="col_heading level0 col21" >revenue_13</th>
+      <th id="T_30d09_level0_col22" class="col_heading level0 col22" >revenue_14</th>
+      <th id="T_30d09_level0_col23" class="col_heading level0 col23" >revenue_15</th>
+      <th id="T_30d09_level0_col24" class="col_heading level0 col24" >revenue_16</th>
+      <th id="T_30d09_level0_col25" class="col_heading level0 col25" >revenue_17</th>
+      <th id="T_30d09_level0_col26" class="col_heading level0 col26" >revenue_18</th>
+      <th id="T_30d09_level0_col27" class="col_heading level0 col27" >revenue_19</th>
+      <th id="T_30d09_level0_col28" class="col_heading level0 col28" >revenue_20</th>
+      <th id="T_30d09_level0_col29" class="col_heading level0 col29" >revenue_21</th>
+      <th id="T_30d09_level0_col30" class="col_heading level0 col30" >revenue_22</th>
+      <th id="T_30d09_level0_col31" class="col_heading level0 col31" >revenue_23</th>
+      <th id="T_30d09_level0_col32" class="col_heading level0 col32" >revenue_24</th>
+      <th id="T_30d09_level0_col33" class="col_heading level0 col33" >revenue_25</th>
+      <th id="T_30d09_level0_col34" class="col_heading level0 col34" >revenue_26</th>
+      <th id="T_30d09_level0_col35" class="col_heading level0 col35" >revenue_27</th>
+      <th id="T_30d09_level0_col36" class="col_heading level0 col36" >revenue_28</th>
+      <th id="T_30d09_level0_col37" class="col_heading level0 col37" >revenue_29</th>
+      <th id="T_30d09_level0_col38" class="col_heading level0 col38" >revenue_30</th>
+      <th id="T_30d09_level0_col39" class="col_heading level0 col39" >revenue_60</th>
+      <th id="T_30d09_level0_col40" class="col_heading level0 col40" >revenue_90</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >game_name</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+      <th class="blank col6" >&nbsp;</th>
+      <th class="blank col7" >&nbsp;</th>
+      <th class="blank col8" >&nbsp;</th>
+      <th class="blank col9" >&nbsp;</th>
+      <th class="blank col10" >&nbsp;</th>
+      <th class="blank col11" >&nbsp;</th>
+      <th class="blank col12" >&nbsp;</th>
+      <th class="blank col13" >&nbsp;</th>
+      <th class="blank col14" >&nbsp;</th>
+      <th class="blank col15" >&nbsp;</th>
+      <th class="blank col16" >&nbsp;</th>
+      <th class="blank col17" >&nbsp;</th>
+      <th class="blank col18" >&nbsp;</th>
+      <th class="blank col19" >&nbsp;</th>
+      <th class="blank col20" >&nbsp;</th>
+      <th class="blank col21" >&nbsp;</th>
+      <th class="blank col22" >&nbsp;</th>
+      <th class="blank col23" >&nbsp;</th>
+      <th class="blank col24" >&nbsp;</th>
+      <th class="blank col25" >&nbsp;</th>
+      <th class="blank col26" >&nbsp;</th>
+      <th class="blank col27" >&nbsp;</th>
+      <th class="blank col28" >&nbsp;</th>
+      <th class="blank col29" >&nbsp;</th>
+      <th class="blank col30" >&nbsp;</th>
+      <th class="blank col31" >&nbsp;</th>
+      <th class="blank col32" >&nbsp;</th>
+      <th class="blank col33" >&nbsp;</th>
+      <th class="blank col34" >&nbsp;</th>
+      <th class="blank col35" >&nbsp;</th>
+      <th class="blank col36" >&nbsp;</th>
+      <th class="blank col37" >&nbsp;</th>
+      <th class="blank col38" >&nbsp;</th>
+      <th class="blank col39" >&nbsp;</th>
+      <th class="blank col40" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_30d09_level0_row0" class="row_heading level0 row0" >game_name_0</th>
+      <td id="T_30d09_row0_col0" class="data row0 col0" >2021-03-15 00:00:00</td>
+      <td id="T_30d09_row0_col1" class="data row0 col1" >ios</td>
+      <td id="T_30d09_row0_col2" class="data row0 col2" >jetfuelit_int</td>
+      <td id="T_30d09_row0_col3" class="data row0 col3" >jetfuelit_int</td>
+      <td id="T_30d09_row0_col4" class="data row0 col4" >campaign_0</td>
+      <td id="T_30d09_row0_col5" class="data row0 col5" >adgroup_541</td>
+      <td id="T_30d09_row0_col6" class="data row0 col6" >1</td>
+      <td id="T_30d09_row0_col7" class="data row0 col7" >0.600000</td>
+      <td id="T_30d09_row0_col8" class="data row0 col8" >0.000000</td>
+      <td id="T_30d09_row0_col9" class="data row0 col9" >0.018173</td>
+      <td id="T_30d09_row0_col10" class="data row0 col10" >0.018173</td>
+      <td id="T_30d09_row0_col11" class="data row0 col11" >0.018173</td>
+      <td id="T_30d09_row0_col12" class="data row0 col12" >0.018173</td>
+      <td id="T_30d09_row0_col13" class="data row0 col13" >0.018173</td>
+      <td id="T_30d09_row0_col14" class="data row0 col14" >0.018173</td>
+      <td id="T_30d09_row0_col15" class="data row0 col15" >0.018173</td>
+      <td id="T_30d09_row0_col16" class="data row0 col16" >0.018173</td>
+      <td id="T_30d09_row0_col17" class="data row0 col17" >0.018173</td>
+      <td id="T_30d09_row0_col18" class="data row0 col18" >0.018173</td>
+      <td id="T_30d09_row0_col19" class="data row0 col19" >0.018173</td>
+      <td id="T_30d09_row0_col20" class="data row0 col20" >0.018173</td>
+      <td id="T_30d09_row0_col21" class="data row0 col21" >0.018173</td>
+      <td id="T_30d09_row0_col22" class="data row0 col22" >0.018173</td>
+      <td id="T_30d09_row0_col23" class="data row0 col23" >0.018173</td>
+      <td id="T_30d09_row0_col24" class="data row0 col24" >0.018173</td>
+      <td id="T_30d09_row0_col25" class="data row0 col25" >0.018173</td>
+      <td id="T_30d09_row0_col26" class="data row0 col26" >0.018173</td>
+      <td id="T_30d09_row0_col27" class="data row0 col27" >0.018173</td>
+      <td id="T_30d09_row0_col28" class="data row0 col28" >0.018173</td>
+      <td id="T_30d09_row0_col29" class="data row0 col29" >0.018173</td>
+      <td id="T_30d09_row0_col30" class="data row0 col30" >0.018173</td>
+      <td id="T_30d09_row0_col31" class="data row0 col31" >0.018173</td>
+      <td id="T_30d09_row0_col32" class="data row0 col32" >0.018173</td>
+      <td id="T_30d09_row0_col33" class="data row0 col33" >0.018173</td>
+      <td id="T_30d09_row0_col34" class="data row0 col34" >0.018173</td>
+      <td id="T_30d09_row0_col35" class="data row0 col35" >0.018173</td>
+      <td id="T_30d09_row0_col36" class="data row0 col36" >0.018173</td>
+      <td id="T_30d09_row0_col37" class="data row0 col37" >0.018173</td>
+      <td id="T_30d09_row0_col38" class="data row0 col38" >0.018173</td>
+      <td id="T_30d09_row0_col39" class="data row0 col39" >0.018173</td>
+      <td id="T_30d09_row0_col40" class="data row0 col40" >0.018173</td>
+    </tr>
+    <tr>
+      <th id="T_30d09_level0_row1" class="row_heading level0 row1" >game_name_0</th>
+      <td id="T_30d09_row1_col0" class="data row1 col0" >2021-03-15 00:00:00</td>
+      <td id="T_30d09_row1_col1" class="data row1 col1" >ios</td>
+      <td id="T_30d09_row1_col2" class="data row1 col2" >jetfuelit_int</td>
+      <td id="T_30d09_row1_col3" class="data row1 col3" >jetfuelit_int</td>
+      <td id="T_30d09_row1_col4" class="data row1 col4" >campaign_0</td>
+      <td id="T_30d09_row1_col5" class="data row1 col5" >adgroup_2351</td>
+      <td id="T_30d09_row1_col6" class="data row1 col6" >2</td>
+      <td id="T_30d09_row1_col7" class="data row1 col7" >4.900000</td>
+      <td id="T_30d09_row1_col8" class="data row1 col8" >0.000000</td>
+      <td id="T_30d09_row1_col9" class="data row1 col9" >0.034000</td>
+      <td id="T_30d09_row1_col10" class="data row1 col10" >0.034000</td>
+      <td id="T_30d09_row1_col11" class="data row1 col11" >0.034000</td>
+      <td id="T_30d09_row1_col12" class="data row1 col12" >0.034000</td>
+      <td id="T_30d09_row1_col13" class="data row1 col13" >0.034000</td>
+      <td id="T_30d09_row1_col14" class="data row1 col14" >0.034000</td>
+      <td id="T_30d09_row1_col15" class="data row1 col15" >0.034000</td>
+      <td id="T_30d09_row1_col16" class="data row1 col16" >0.034000</td>
+      <td id="T_30d09_row1_col17" class="data row1 col17" >0.034000</td>
+      <td id="T_30d09_row1_col18" class="data row1 col18" >0.034000</td>
+      <td id="T_30d09_row1_col19" class="data row1 col19" >0.034000</td>
+      <td id="T_30d09_row1_col20" class="data row1 col20" >0.034000</td>
+      <td id="T_30d09_row1_col21" class="data row1 col21" >0.034000</td>
+      <td id="T_30d09_row1_col22" class="data row1 col22" >0.034000</td>
+      <td id="T_30d09_row1_col23" class="data row1 col23" >0.034000</td>
+      <td id="T_30d09_row1_col24" class="data row1 col24" >0.034000</td>
+      <td id="T_30d09_row1_col25" class="data row1 col25" >0.034000</td>
+      <td id="T_30d09_row1_col26" class="data row1 col26" >0.034000</td>
+      <td id="T_30d09_row1_col27" class="data row1 col27" >0.034000</td>
+      <td id="T_30d09_row1_col28" class="data row1 col28" >0.034000</td>
+      <td id="T_30d09_row1_col29" class="data row1 col29" >0.034000</td>
+      <td id="T_30d09_row1_col30" class="data row1 col30" >0.034000</td>
+      <td id="T_30d09_row1_col31" class="data row1 col31" >0.034000</td>
+      <td id="T_30d09_row1_col32" class="data row1 col32" >6.034000</td>
+      <td id="T_30d09_row1_col33" class="data row1 col33" >6.034000</td>
+      <td id="T_30d09_row1_col34" class="data row1 col34" >6.034000</td>
+      <td id="T_30d09_row1_col35" class="data row1 col35" >6.034000</td>
+      <td id="T_30d09_row1_col36" class="data row1 col36" >6.034000</td>
+      <td id="T_30d09_row1_col37" class="data row1 col37" >6.034000</td>
+      <td id="T_30d09_row1_col38" class="data row1 col38" >6.034000</td>
+      <td id="T_30d09_row1_col39" class="data row1 col39" >6.034000</td>
+      <td id="T_30d09_row1_col40" class="data row1 col40" >13.030497</td>
+    </tr>
+    <tr>
+      <th id="T_30d09_level0_row2" class="row_heading level0 row2" >game_name_0</th>
+      <td id="T_30d09_row2_col0" class="data row2 col0" >2021-03-15 00:00:00</td>
+      <td id="T_30d09_row2_col1" class="data row2 col1" >ios</td>
+      <td id="T_30d09_row2_col2" class="data row2 col2" >jetfuelit_int</td>
+      <td id="T_30d09_row2_col3" class="data row2 col3" >jetfuelit_int</td>
+      <td id="T_30d09_row2_col4" class="data row2 col4" >campaign_0</td>
+      <td id="T_30d09_row2_col5" class="data row2 col5" >adgroup_636</td>
+      <td id="T_30d09_row2_col6" class="data row2 col6" >3</td>
+      <td id="T_30d09_row2_col7" class="data row2 col7" >7.350000</td>
+      <td id="T_30d09_row2_col8" class="data row2 col8" >0.000000</td>
+      <td id="T_30d09_row2_col9" class="data row2 col9" >0.000000</td>
+      <td id="T_30d09_row2_col10" class="data row2 col10" >0.034000</td>
+      <td id="T_30d09_row2_col11" class="data row2 col11" >0.112897</td>
+      <td id="T_30d09_row2_col12" class="data row2 col12" >12.112897</td>
+      <td id="T_30d09_row2_col13" class="data row2 col13" >12.112897</td>
+      <td id="T_30d09_row2_col14" class="data row2 col14" >12.112897</td>
+      <td id="T_30d09_row2_col15" class="data row2 col15" >12.112897</td>
+      <td id="T_30d09_row2_col16" class="data row2 col16" >12.112897</td>
+      <td id="T_30d09_row2_col17" class="data row2 col17" >12.112897</td>
+      <td id="T_30d09_row2_col18" class="data row2 col18" >12.112897</td>
+      <td id="T_30d09_row2_col19" class="data row2 col19" >12.112897</td>
+      <td id="T_30d09_row2_col20" class="data row2 col20" >12.112897</td>
+      <td id="T_30d09_row2_col21" class="data row2 col21" >12.112897</td>
+      <td id="T_30d09_row2_col22" class="data row2 col22" >12.112897</td>
+      <td id="T_30d09_row2_col23" class="data row2 col23" >12.112897</td>
+      <td id="T_30d09_row2_col24" class="data row2 col24" >12.112897</td>
+      <td id="T_30d09_row2_col25" class="data row2 col25" >12.112897</td>
+      <td id="T_30d09_row2_col26" class="data row2 col26" >12.112897</td>
+      <td id="T_30d09_row2_col27" class="data row2 col27" >12.112897</td>
+      <td id="T_30d09_row2_col28" class="data row2 col28" >12.112897</td>
+      <td id="T_30d09_row2_col29" class="data row2 col29" >12.112897</td>
+      <td id="T_30d09_row2_col30" class="data row2 col30" >12.112897</td>
+      <td id="T_30d09_row2_col31" class="data row2 col31" >12.112897</td>
+      <td id="T_30d09_row2_col32" class="data row2 col32" >12.112897</td>
+      <td id="T_30d09_row2_col33" class="data row2 col33" >12.112897</td>
+      <td id="T_30d09_row2_col34" class="data row2 col34" >12.112897</td>
+      <td id="T_30d09_row2_col35" class="data row2 col35" >12.112897</td>
+      <td id="T_30d09_row2_col36" class="data row2 col36" >12.112897</td>
+      <td id="T_30d09_row2_col37" class="data row2 col37" >12.112897</td>
+      <td id="T_30d09_row2_col38" class="data row2 col38" >12.112897</td>
+      <td id="T_30d09_row2_col39" class="data row2 col39" >12.112897</td>
+      <td id="T_30d09_row2_col40" class="data row2 col40" >12.112897</td>
+    </tr>
+    <tr>
+      <th id="T_30d09_level0_row3" class="row_heading level0 row3" >game_name_0</th>
+      <td id="T_30d09_row3_col0" class="data row3 col0" >2021-03-15 00:00:00</td>
+      <td id="T_30d09_row3_col1" class="data row3 col1" >ios</td>
+      <td id="T_30d09_row3_col2" class="data row3 col2" >jetfuelit_int</td>
+      <td id="T_30d09_row3_col3" class="data row3 col3" >jetfuelit_int</td>
+      <td id="T_30d09_row3_col4" class="data row3 col4" >campaign_0</td>
+      <td id="T_30d09_row3_col5" class="data row3 col5" >adgroup_569</td>
+      <td id="T_30d09_row3_col6" class="data row3 col6" >1</td>
+      <td id="T_30d09_row3_col7" class="data row3 col7" >0.750000</td>
+      <td id="T_30d09_row3_col8" class="data row3 col8" >0.000000</td>
+      <td id="T_30d09_row3_col9" class="data row3 col9" >0.029673</td>
+      <td id="T_30d09_row3_col10" class="data row3 col10" >0.029673</td>
+      <td id="T_30d09_row3_col11" class="data row3 col11" >0.029673</td>
+      <td id="T_30d09_row3_col12" class="data row3 col12" >0.029673</td>
+      <td id="T_30d09_row3_col13" class="data row3 col13" >0.029673</td>
+      <td id="T_30d09_row3_col14" class="data row3 col14" >0.029673</td>
+      <td id="T_30d09_row3_col15" class="data row3 col15" >0.029673</td>
+      <td id="T_30d09_row3_col16" class="data row3 col16" >0.029673</td>
+      <td id="T_30d09_row3_col17" class="data row3 col17" >0.029673</td>
+      <td id="T_30d09_row3_col18" class="data row3 col18" >0.029673</td>
+      <td id="T_30d09_row3_col19" class="data row3 col19" >0.029673</td>
+      <td id="T_30d09_row3_col20" class="data row3 col20" >0.029673</td>
+      <td id="T_30d09_row3_col21" class="data row3 col21" >0.029673</td>
+      <td id="T_30d09_row3_col22" class="data row3 col22" >0.029673</td>
+      <td id="T_30d09_row3_col23" class="data row3 col23" >0.029673</td>
+      <td id="T_30d09_row3_col24" class="data row3 col24" >0.029673</td>
+      <td id="T_30d09_row3_col25" class="data row3 col25" >0.029673</td>
+      <td id="T_30d09_row3_col26" class="data row3 col26" >0.029673</td>
+      <td id="T_30d09_row3_col27" class="data row3 col27" >0.029673</td>
+      <td id="T_30d09_row3_col28" class="data row3 col28" >0.029673</td>
+      <td id="T_30d09_row3_col29" class="data row3 col29" >0.029673</td>
+      <td id="T_30d09_row3_col30" class="data row3 col30" >0.029673</td>
+      <td id="T_30d09_row3_col31" class="data row3 col31" >0.029673</td>
+      <td id="T_30d09_row3_col32" class="data row3 col32" >0.029673</td>
+      <td id="T_30d09_row3_col33" class="data row3 col33" >0.029673</td>
+      <td id="T_30d09_row3_col34" class="data row3 col34" >0.029673</td>
+      <td id="T_30d09_row3_col35" class="data row3 col35" >0.029673</td>
+      <td id="T_30d09_row3_col36" class="data row3 col36" >0.029673</td>
+      <td id="T_30d09_row3_col37" class="data row3 col37" >0.029673</td>
+      <td id="T_30d09_row3_col38" class="data row3 col38" >0.029673</td>
+      <td id="T_30d09_row3_col39" class="data row3 col39" >0.029673</td>
+      <td id="T_30d09_row3_col40" class="data row3 col40" >0.029673</td>
+    </tr>
+    <tr>
+      <th id="T_30d09_level0_row4" class="row_heading level0 row4" >game_name_0</th>
+      <td id="T_30d09_row4_col0" class="data row4 col0" >2021-03-15 00:00:00</td>
+      <td id="T_30d09_row4_col1" class="data row4 col1" >ios</td>
+      <td id="T_30d09_row4_col2" class="data row4 col2" >jetfuelit_int</td>
+      <td id="T_30d09_row4_col3" class="data row4 col3" >jetfuelit_int</td>
+      <td id="T_30d09_row4_col4" class="data row4 col4" >campaign_0</td>
+      <td id="T_30d09_row4_col5" class="data row4 col5" >adgroup_243</td>
+      <td id="T_30d09_row4_col6" class="data row4 col6" >2</td>
+      <td id="T_30d09_row4_col7" class="data row4 col7" >3.440000</td>
+      <td id="T_30d09_row4_col8" class="data row4 col8" >0.000000</td>
+      <td id="T_30d09_row4_col9" class="data row4 col9" >0.027981</td>
+      <td id="T_30d09_row4_col10" class="data row4 col10" >0.042155</td>
+      <td id="T_30d09_row4_col11" class="data row4 col11" >0.042155</td>
+      <td id="T_30d09_row4_col12" class="data row4 col12" >0.042155</td>
+      <td id="T_30d09_row4_col13" class="data row4 col13" >0.042155</td>
+      <td id="T_30d09_row4_col14" class="data row4 col14" >0.042155</td>
+      <td id="T_30d09_row4_col15" class="data row4 col15" >0.042155</td>
+      <td id="T_30d09_row4_col16" class="data row4 col16" >0.042155</td>
+      <td id="T_30d09_row4_col17" class="data row4 col17" >0.042155</td>
+      <td id="T_30d09_row4_col18" class="data row4 col18" >0.042155</td>
+      <td id="T_30d09_row4_col19" class="data row4 col19" >0.042155</td>
+      <td id="T_30d09_row4_col20" class="data row4 col20" >0.042155</td>
+      <td id="T_30d09_row4_col21" class="data row4 col21" >0.042155</td>
+      <td id="T_30d09_row4_col22" class="data row4 col22" >0.042155</td>
+      <td id="T_30d09_row4_col23" class="data row4 col23" >0.042155</td>
+      <td id="T_30d09_row4_col24" class="data row4 col24" >0.042155</td>
+      <td id="T_30d09_row4_col25" class="data row4 col25" >0.042155</td>
+      <td id="T_30d09_row4_col26" class="data row4 col26" >0.042155</td>
+      <td id="T_30d09_row4_col27" class="data row4 col27" >0.042155</td>
+      <td id="T_30d09_row4_col28" class="data row4 col28" >0.042155</td>
+      <td id="T_30d09_row4_col29" class="data row4 col29" >0.042155</td>
+      <td id="T_30d09_row4_col30" class="data row4 col30" >0.042155</td>
+      <td id="T_30d09_row4_col31" class="data row4 col31" >0.042155</td>
+      <td id="T_30d09_row4_col32" class="data row4 col32" >0.042155</td>
+      <td id="T_30d09_row4_col33" class="data row4 col33" >0.042155</td>
+      <td id="T_30d09_row4_col34" class="data row4 col34" >0.042155</td>
+      <td id="T_30d09_row4_col35" class="data row4 col35" >0.042155</td>
+      <td id="T_30d09_row4_col36" class="data row4 col36" >0.042155</td>
+      <td id="T_30d09_row4_col37" class="data row4 col37" >0.042155</td>
+      <td id="T_30d09_row4_col38" class="data row4 col38" >0.042155</td>
+      <td id="T_30d09_row4_col39" class="data row4 col39" >0.042155</td>
+      <td id="T_30d09_row4_col40" class="data row4 col40" >0.042155</td>
+    </tr>
+    <tr>
+      <th id="T_30d09_level0_row5" class="row_heading level0 row5" >game_name_0</th>
+      <td id="T_30d09_row5_col0" class="data row5 col0" >2021-03-15 00:00:00</td>
+      <td id="T_30d09_row5_col1" class="data row5 col1" >android</td>
+      <td id="T_30d09_row5_col2" class="data row5 col2" >googleadwords_int</td>
+      <td id="T_30d09_row5_col3" class="data row5 col3" >googleadwords_int</td>
+      <td id="T_30d09_row5_col4" class="data row5 col4" >campaign_283</td>
+      <td id="T_30d09_row5_col5" class="data row5 col5" >adgroup_1685</td>
+      <td id="T_30d09_row5_col6" class="data row5 col6" >11</td>
+      <td id="T_30d09_row5_col7" class="data row5 col7" >0.000000</td>
+      <td id="T_30d09_row5_col8" class="data row5 col8" >0.000000</td>
+      <td id="T_30d09_row5_col9" class="data row5 col9" >0.097342</td>
+      <td id="T_30d09_row5_col10" class="data row5 col10" >0.105832</td>
+      <td id="T_30d09_row5_col11" class="data row5 col11" >0.105832</td>
+      <td id="T_30d09_row5_col12" class="data row5 col12" >0.114427</td>
+      <td id="T_30d09_row5_col13" class="data row5 col13" >0.126571</td>
+      <td id="T_30d09_row5_col14" class="data row5 col14" >0.138659</td>
+      <td id="T_30d09_row5_col15" class="data row5 col15" >0.134605</td>
+      <td id="T_30d09_row5_col16" class="data row5 col16" >0.134605</td>
+      <td id="T_30d09_row5_col17" class="data row5 col17" >0.134605</td>
+      <td id="T_30d09_row5_col18" class="data row5 col18" >0.137692</td>
+      <td id="T_30d09_row5_col19" class="data row5 col19" >0.139581</td>
+      <td id="T_30d09_row5_col20" class="data row5 col20" >0.139581</td>
+      <td id="T_30d09_row5_col21" class="data row5 col21" >0.139581</td>
+      <td id="T_30d09_row5_col22" class="data row5 col22" >0.139581</td>
+      <td id="T_30d09_row5_col23" class="data row5 col23" >0.139581</td>
+      <td id="T_30d09_row5_col24" class="data row5 col24" >0.139581</td>
+      <td id="T_30d09_row5_col25" class="data row5 col25" >0.139581</td>
+      <td id="T_30d09_row5_col26" class="data row5 col26" >0.139581</td>
+      <td id="T_30d09_row5_col27" class="data row5 col27" >0.139581</td>
+      <td id="T_30d09_row5_col28" class="data row5 col28" >0.139581</td>
+      <td id="T_30d09_row5_col29" class="data row5 col29" >0.139581</td>
+      <td id="T_30d09_row5_col30" class="data row5 col30" >0.139581</td>
+      <td id="T_30d09_row5_col31" class="data row5 col31" >0.139581</td>
+      <td id="T_30d09_row5_col32" class="data row5 col32" >0.139581</td>
+      <td id="T_30d09_row5_col33" class="data row5 col33" >0.139581</td>
+      <td id="T_30d09_row5_col34" class="data row5 col34" >0.139581</td>
+      <td id="T_30d09_row5_col35" class="data row5 col35" >0.139581</td>
+      <td id="T_30d09_row5_col36" class="data row5 col36" >0.139581</td>
+      <td id="T_30d09_row5_col37" class="data row5 col37" >0.139581</td>
+      <td id="T_30d09_row5_col38" class="data row5 col38" >0.139581</td>
+      <td id="T_30d09_row5_col39" class="data row5 col39" >0.139581</td>
+      <td id="T_30d09_row5_col40" class="data row5 col40" >0.139581</td>
+    </tr>
+    <tr>
+      <th id="T_30d09_level0_row6" class="row_heading level0 row6" >game_name_0</th>
+      <td id="T_30d09_row6_col0" class="data row6 col0" >2021-03-15 00:00:00</td>
+      <td id="T_30d09_row6_col1" class="data row6 col1" >android</td>
+      <td id="T_30d09_row6_col2" class="data row6 col2" >googleadwords_int</td>
+      <td id="T_30d09_row6_col3" class="data row6 col3" >googleadwords_int</td>
+      <td id="T_30d09_row6_col4" class="data row6 col4" >campaign_2</td>
+      <td id="T_30d09_row6_col5" class="data row6 col5" >adgroup_56</td>
+      <td id="T_30d09_row6_col6" class="data row6 col6" >32</td>
+      <td id="T_30d09_row6_col7" class="data row6 col7" >30.090000</td>
+      <td id="T_30d09_row6_col8" class="data row6 col8" >0.000000</td>
+      <td id="T_30d09_row6_col9" class="data row6 col9" >0.802349</td>
+      <td id="T_30d09_row6_col10" class="data row6 col10" >0.747480</td>
+      <td id="T_30d09_row6_col11" class="data row6 col11" >1.342748</td>
+      <td id="T_30d09_row6_col12" class="data row6 col12" >1.301987</td>
+      <td id="T_30d09_row6_col13" class="data row6 col13" >1.301987</td>
+      <td id="T_30d09_row6_col14" class="data row6 col14" >2.425463</td>
+      <td id="T_30d09_row6_col15" class="data row6 col15" >2.537004</td>
+      <td id="T_30d09_row6_col16" class="data row6 col16" >2.537004</td>
+      <td id="T_30d09_row6_col17" class="data row6 col17" >2.537004</td>
+      <td id="T_30d09_row6_col18" class="data row6 col18" >2.537004</td>
+      <td id="T_30d09_row6_col19" class="data row6 col19" >2.537004</td>
+      <td id="T_30d09_row6_col20" class="data row6 col20" >2.537004</td>
+      <td id="T_30d09_row6_col21" class="data row6 col21" >2.537004</td>
+      <td id="T_30d09_row6_col22" class="data row6 col22" >2.537004</td>
+      <td id="T_30d09_row6_col23" class="data row6 col23" >2.537004</td>
+      <td id="T_30d09_row6_col24" class="data row6 col24" >2.537004</td>
+      <td id="T_30d09_row6_col25" class="data row6 col25" >2.537004</td>
+      <td id="T_30d09_row6_col26" class="data row6 col26" >2.537004</td>
+      <td id="T_30d09_row6_col27" class="data row6 col27" >2.537004</td>
+      <td id="T_30d09_row6_col28" class="data row6 col28" >2.537004</td>
+      <td id="T_30d09_row6_col29" class="data row6 col29" >2.537004</td>
+      <td id="T_30d09_row6_col30" class="data row6 col30" >2.548253</td>
+      <td id="T_30d09_row6_col31" class="data row6 col31" >2.548253</td>
+      <td id="T_30d09_row6_col32" class="data row6 col32" >2.548253</td>
+      <td id="T_30d09_row6_col33" class="data row6 col33" >2.771138</td>
+      <td id="T_30d09_row6_col34" class="data row6 col34" >2.805776</td>
+      <td id="T_30d09_row6_col35" class="data row6 col35" >2.805776</td>
+      <td id="T_30d09_row6_col36" class="data row6 col36" >2.805776</td>
+      <td id="T_30d09_row6_col37" class="data row6 col37" >2.805776</td>
+      <td id="T_30d09_row6_col38" class="data row6 col38" >2.805776</td>
+      <td id="T_30d09_row6_col39" class="data row6 col39" >2.805776</td>
+      <td id="T_30d09_row6_col40" class="data row6 col40" >2.805776</td>
+    </tr>
+    <tr>
+      <th id="T_30d09_level0_row7" class="row_heading level0 row7" >game_name_0</th>
+      <td id="T_30d09_row7_col0" class="data row7 col0" >2021-03-15 00:00:00</td>
+      <td id="T_30d09_row7_col1" class="data row7 col1" >android</td>
+      <td id="T_30d09_row7_col2" class="data row7 col2" >moloco_int</td>
+      <td id="T_30d09_row7_col3" class="data row7 col3" >moloco_int</td>
+      <td id="T_30d09_row7_col4" class="data row7 col4" >campaign_191</td>
+      <td id="T_30d09_row7_col5" class="data row7 col5" >None</td>
+      <td id="T_30d09_row7_col6" class="data row7 col6" >291</td>
+      <td id="T_30d09_row7_col7" class="data row7 col7" >503.480011</td>
+      <td id="T_30d09_row7_col8" class="data row7 col8" >34.701553</td>
+      <td id="T_30d09_row7_col9" class="data row7 col9" >63.618111</td>
+      <td id="T_30d09_row7_col10" class="data row7 col10" >73.118065</td>
+      <td id="T_30d09_row7_col11" class="data row7 col11" >83.186073</td>
+      <td id="T_30d09_row7_col12" class="data row7 col12" >93.135414</td>
+      <td id="T_30d09_row7_col13" class="data row7 col13" >95.532127</td>
+      <td id="T_30d09_row7_col14" class="data row7 col14" >102.649849</td>
+      <td id="T_30d09_row7_col15" class="data row7 col15" >108.591347</td>
+      <td id="T_30d09_row7_col16" class="data row7 col16" >109.839607</td>
+      <td id="T_30d09_row7_col17" class="data row7 col17" >109.839607</td>
+      <td id="T_30d09_row7_col18" class="data row7 col18" >111.157013</td>
+      <td id="T_30d09_row7_col19" class="data row7 col19" >111.790909</td>
+      <td id="T_30d09_row7_col20" class="data row7 col20" >113.925873</td>
+      <td id="T_30d09_row7_col21" class="data row7 col21" >114.228226</td>
+      <td id="T_30d09_row7_col22" class="data row7 col22" >114.500160</td>
+      <td id="T_30d09_row7_col23" class="data row7 col23" >115.298882</td>
+      <td id="T_30d09_row7_col24" class="data row7 col24" >115.285194</td>
+      <td id="T_30d09_row7_col25" class="data row7 col25" >115.299660</td>
+      <td id="T_30d09_row7_col26" class="data row7 col26" >115.404655</td>
+      <td id="T_30d09_row7_col27" class="data row7 col27" >115.425957</td>
+      <td id="T_30d09_row7_col28" class="data row7 col28" >115.456314</td>
+      <td id="T_30d09_row7_col29" class="data row7 col29" >116.153206</td>
+      <td id="T_30d09_row7_col30" class="data row7 col30" >116.508331</td>
+      <td id="T_30d09_row7_col31" class="data row7 col31" >116.508331</td>
+      <td id="T_30d09_row7_col32" class="data row7 col32" >117.334709</td>
+      <td id="T_30d09_row7_col33" class="data row7 col33" >117.387489</td>
+      <td id="T_30d09_row7_col34" class="data row7 col34" >117.509506</td>
+      <td id="T_30d09_row7_col35" class="data row7 col35" >118.811417</td>
+      <td id="T_30d09_row7_col36" class="data row7 col36" >118.760765</td>
+      <td id="T_30d09_row7_col37" class="data row7 col37" >119.151291</td>
+      <td id="T_30d09_row7_col38" class="data row7 col38" >119.350220</td>
+      <td id="T_30d09_row7_col39" class="data row7 col39" >139.069443</td>
+      <td id="T_30d09_row7_col40" class="data row7 col40" >147.528793</td>
+    </tr>
+    <tr>
+      <th id="T_30d09_level0_row8" class="row_heading level0 row8" >game_name_0</th>
+      <td id="T_30d09_row8_col0" class="data row8 col0" >2021-03-15 00:00:00</td>
+      <td id="T_30d09_row8_col1" class="data row8 col1" >android</td>
+      <td id="T_30d09_row8_col2" class="data row8 col2" >jetfuelit_int</td>
+      <td id="T_30d09_row8_col3" class="data row8 col3" >jetfuelit_int</td>
+      <td id="T_30d09_row8_col4" class="data row8 col4" >campaign_0</td>
+      <td id="T_30d09_row8_col5" class="data row8 col5" >adgroup_190</td>
+      <td id="T_30d09_row8_col6" class="data row8 col6" >4</td>
+      <td id="T_30d09_row8_col7" class="data row8 col7" >2.740000</td>
+      <td id="T_30d09_row8_col8" class="data row8 col8" >0.000000</td>
+      <td id="T_30d09_row8_col9" class="data row8 col9" >0.000000</td>
+      <td id="T_30d09_row8_col10" class="data row8 col10" >0.000000</td>
+      <td id="T_30d09_row8_col11" class="data row8 col11" >0.000000</td>
+      <td id="T_30d09_row8_col12" class="data row8 col12" >0.000000</td>
+      <td id="T_30d09_row8_col13" class="data row8 col13" >0.000000</td>
+      <td id="T_30d09_row8_col14" class="data row8 col14" >0.000000</td>
+      <td id="T_30d09_row8_col15" class="data row8 col15" >0.000000</td>
+      <td id="T_30d09_row8_col16" class="data row8 col16" >0.000000</td>
+      <td id="T_30d09_row8_col17" class="data row8 col17" >0.000000</td>
+      <td id="T_30d09_row8_col18" class="data row8 col18" >0.000000</td>
+      <td id="T_30d09_row8_col19" class="data row8 col19" >0.000000</td>
+      <td id="T_30d09_row8_col20" class="data row8 col20" >0.000000</td>
+      <td id="T_30d09_row8_col21" class="data row8 col21" >0.000000</td>
+      <td id="T_30d09_row8_col22" class="data row8 col22" >0.000000</td>
+      <td id="T_30d09_row8_col23" class="data row8 col23" >0.000000</td>
+      <td id="T_30d09_row8_col24" class="data row8 col24" >0.000000</td>
+      <td id="T_30d09_row8_col25" class="data row8 col25" >0.000000</td>
+      <td id="T_30d09_row8_col26" class="data row8 col26" >0.000000</td>
+      <td id="T_30d09_row8_col27" class="data row8 col27" >0.000000</td>
+      <td id="T_30d09_row8_col28" class="data row8 col28" >0.000000</td>
+      <td id="T_30d09_row8_col29" class="data row8 col29" >0.000000</td>
+      <td id="T_30d09_row8_col30" class="data row8 col30" >0.000000</td>
+      <td id="T_30d09_row8_col31" class="data row8 col31" >0.000000</td>
+      <td id="T_30d09_row8_col32" class="data row8 col32" >0.000000</td>
+      <td id="T_30d09_row8_col33" class="data row8 col33" >0.000000</td>
+      <td id="T_30d09_row8_col34" class="data row8 col34" >0.000000</td>
+      <td id="T_30d09_row8_col35" class="data row8 col35" >0.000000</td>
+      <td id="T_30d09_row8_col36" class="data row8 col36" >0.000000</td>
+      <td id="T_30d09_row8_col37" class="data row8 col37" >0.000000</td>
+      <td id="T_30d09_row8_col38" class="data row8 col38" >0.000000</td>
+      <td id="T_30d09_row8_col39" class="data row8 col39" >0.000000</td>
+      <td id="T_30d09_row8_col40" class="data row8 col40" >0.000000</td>
+    </tr>
+    <tr>
+      <th id="T_30d09_level0_row9" class="row_heading level0 row9" >game_name_0</th>
+      <td id="T_30d09_row9_col0" class="data row9 col0" >2021-03-15 00:00:00</td>
+      <td id="T_30d09_row9_col1" class="data row9 col1" >android</td>
+      <td id="T_30d09_row9_col2" class="data row9 col2" >jetfuelit_int</td>
+      <td id="T_30d09_row9_col3" class="data row9 col3" >jetfuelit_int</td>
+      <td id="T_30d09_row9_col4" class="data row9 col4" >campaign_0</td>
+      <td id="T_30d09_row9_col5" class="data row9 col5" >adgroup_755</td>
+      <td id="T_30d09_row9_col6" class="data row9 col6" >8</td>
+      <td id="T_30d09_row9_col7" class="data row9 col7" >11.300000</td>
+      <td id="T_30d09_row9_col8" class="data row9 col8" >13.976003</td>
+      <td id="T_30d09_row9_col9" class="data row9 col9" >14.358793</td>
+      <td id="T_30d09_row9_col10" class="data row9 col10" >14.338905</td>
+      <td id="T_30d09_row9_col11" class="data row9 col11" >14.338905</td>
+      <td id="T_30d09_row9_col12" class="data row9 col12" >14.338905</td>
+      <td id="T_30d09_row9_col13" class="data row9 col13" >14.338905</td>
+      <td id="T_30d09_row9_col14" class="data row9 col14" >14.338905</td>
+      <td id="T_30d09_row9_col15" class="data row9 col15" >14.338905</td>
+      <td id="T_30d09_row9_col16" class="data row9 col16" >14.338905</td>
+      <td id="T_30d09_row9_col17" class="data row9 col17" >14.338905</td>
+      <td id="T_30d09_row9_col18" class="data row9 col18" >14.338905</td>
+      <td id="T_30d09_row9_col19" class="data row9 col19" >14.338905</td>
+      <td id="T_30d09_row9_col20" class="data row9 col20" >14.338905</td>
+      <td id="T_30d09_row9_col21" class="data row9 col21" >14.338905</td>
+      <td id="T_30d09_row9_col22" class="data row9 col22" >14.338905</td>
+      <td id="T_30d09_row9_col23" class="data row9 col23" >14.338905</td>
+      <td id="T_30d09_row9_col24" class="data row9 col24" >14.338905</td>
+      <td id="T_30d09_row9_col25" class="data row9 col25" >14.338905</td>
+      <td id="T_30d09_row9_col26" class="data row9 col26" >14.338905</td>
+      <td id="T_30d09_row9_col27" class="data row9 col27" >14.338905</td>
+      <td id="T_30d09_row9_col28" class="data row9 col28" >14.338905</td>
+      <td id="T_30d09_row9_col29" class="data row9 col29" >14.338905</td>
+      <td id="T_30d09_row9_col30" class="data row9 col30" >14.338905</td>
+      <td id="T_30d09_row9_col31" class="data row9 col31" >14.338905</td>
+      <td id="T_30d09_row9_col32" class="data row9 col32" >14.338905</td>
+      <td id="T_30d09_row9_col33" class="data row9 col33" >14.338905</td>
+      <td id="T_30d09_row9_col34" class="data row9 col34" >14.338905</td>
+      <td id="T_30d09_row9_col35" class="data row9 col35" >14.338905</td>
+      <td id="T_30d09_row9_col36" class="data row9 col36" >14.338905</td>
+      <td id="T_30d09_row9_col37" class="data row9 col37" >14.338905</td>
+      <td id="T_30d09_row9_col38" class="data row9 col38" >14.338905</td>
+      <td id="T_30d09_row9_col39" class="data row9 col39" >14.338905</td>
+      <td id="T_30d09_row9_col40" class="data row9 col40" >14.338905</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="2-training">2. Training<a class="headerlink" href="#2-training" title="Permanent link">¤</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Todo</span>
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2022 onwards, airt.ai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+    and 
+    <a href="https://nbdev-mkdocs.airt.ai/" target="_blank" rel="noopener">
+      Material for nbdev
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+        <script src="../overrides/js/extra.js"></script>
+      
+        <script src="../overrides/js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1961 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Captn client library">
+      
+      
+        <meta name="author" content="airt.ai">
+      
+      
+        <link rel="canonical" href="https://airtai.github.io/captn-client/captn_cli_docs/captn/">
+      
+      
+        <link rel="prev" href="../../captn_api_docs/captn/client/">
+      
+      
+        <link rel="next" href="../../CHANGELOG/">
+      
+      <link rel="icon" href="../../overrides/images/compass-outline.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
+    
+    
+      
+        <title>captn - captn</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a7fce14.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../overrides/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  
+  
+    
+  
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="captn - captn" />
+  <meta property="og:description" content="Captn client library" />
+  <meta property="og:url" content="https://airtai.github.io/captn-client/captn_cli_docs/captn/" />
+  <meta property="og:image" content="https://opengraph.githubassets.com/1672044312.260023/airtai/captn-client" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="captn - captn" />
+  <meta name="twitter:description" content="Captn client library" />
+  <meta name="twitter:image" content="https://opengraph.githubassets.com/1672044312.260023/airtai/captn-client" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="yellow">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#captn" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="captn" class="md-header__button md-logo" aria-label="captn" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7 17 3.2-6.8L17 7l-3.2 6.8L7 17m5-5.9a.9.9 0 0 0-.9.9.9.9 0 0 0 .9.9.9.9 0 0 0 .9-.9.9.9 0 0 0-.9-.9M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            captn
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              captn
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/airtai/captn-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    captn-client
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="captn" class="md-nav__button md-logo" aria-label="captn" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7 17 3.2-6.8L17 7l-3.2 6.8L7 17m5-5.9a.9.9 0 0 0-.9.9.9.9 0 0 0 .9.9.9.9 0 0 0 .9-.9.9.9 0 0 0-.9-.9M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8Z"/></svg>
+
+    </a>
+    captn
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/airtai/captn-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    captn-client
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Capt'n python client
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tutorial/" class="md-nav__link">
+        Tutorial
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../captn_api_docs/captn/client/" class="md-nav__link">
+        captn.client
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          captn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        captn
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#captn-api-key" class="md-nav__link">
+    captn api-key
+  </a>
+  
+    <nav class="md-nav" aria-label="captn api-key">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#captn-api-key-create" class="md-nav__link">
+    captn api-key create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-api-key-details" class="md-nav__link">
+    captn api-key details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-api-key-ls" class="md-nav__link">
+    captn api-key ls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-api-key-revoke" class="md-nav__link">
+    captn api-key revoke
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captn-db" class="md-nav__link">
+    captn db
+  </a>
+  
+    <nav class="md-nav" aria-label="captn db">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-details" class="md-nav__link">
+    captn db details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-from-azure-blob-storage" class="md-nav__link">
+    captn db from-azure-blob-storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-from-clickhouse" class="md-nav__link">
+    captn db from-clickhouse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-from-local" class="md-nav__link">
+    captn db from-local
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-from-mysql" class="md-nav__link">
+    captn db from-mysql
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-from-s3" class="md-nav__link">
+    captn db from-s3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-ls" class="md-nav__link">
+    captn db ls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-rm" class="md-nav__link">
+    captn db rm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-tag" class="md-nav__link">
+    captn db tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-to-datasource" class="md-nav__link">
+    captn db to-datasource
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captn-ds" class="md-nav__link">
+    captn ds
+  </a>
+  
+    <nav class="md-nav" aria-label="captn ds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-details" class="md-nav__link">
+    captn ds details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-dtypes" class="md-nav__link">
+    captn ds dtypes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-head" class="md-nav__link">
+    captn ds head
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-ls" class="md-nav__link">
+    captn ds ls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-rm" class="md-nav__link">
+    captn ds rm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-tag" class="md-nav__link">
+    captn ds tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-train" class="md-nav__link">
+    captn ds train
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captn-token" class="md-nav__link">
+    captn token
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captn-user" class="md-nav__link">
+    captn user
+  </a>
+  
+    <nav class="md-nav" aria-label="captn user">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-create" class="md-nav__link">
+    captn user create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-details" class="md-nav__link">
+    captn user details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-disable" class="md-nav__link">
+    captn user disable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-enable" class="md-nav__link">
+    captn user enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-ls" class="md-nav__link">
+    captn user ls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-mfa" class="md-nav__link">
+    captn user mfa
+  </a>
+  
+    <nav class="md-nav" aria-label="captn user mfa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-mfa-disable" class="md-nav__link">
+    captn user mfa disable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-mfa-enable" class="md-nav__link">
+    captn user mfa enable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-register-phone-number" class="md-nav__link">
+    captn user register-phone-number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-reset-password" class="md-nav__link">
+    captn user reset-password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-sso" class="md-nav__link">
+    captn user sso
+  </a>
+  
+    <nav class="md-nav" aria-label="captn user sso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-sso-disable" class="md-nav__link">
+    captn user sso disable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-sso-enable" class="md-nav__link">
+    captn user sso enable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-update" class="md-nav__link">
+    captn user update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captn-version" class="md-nav__link">
+    captn version
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CHANGELOG/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#captn-api-key" class="md-nav__link">
+    captn api-key
+  </a>
+  
+    <nav class="md-nav" aria-label="captn api-key">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#captn-api-key-create" class="md-nav__link">
+    captn api-key create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-api-key-details" class="md-nav__link">
+    captn api-key details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-api-key-ls" class="md-nav__link">
+    captn api-key ls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-api-key-revoke" class="md-nav__link">
+    captn api-key revoke
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captn-db" class="md-nav__link">
+    captn db
+  </a>
+  
+    <nav class="md-nav" aria-label="captn db">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-details" class="md-nav__link">
+    captn db details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-from-azure-blob-storage" class="md-nav__link">
+    captn db from-azure-blob-storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-from-clickhouse" class="md-nav__link">
+    captn db from-clickhouse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-from-local" class="md-nav__link">
+    captn db from-local
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-from-mysql" class="md-nav__link">
+    captn db from-mysql
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-from-s3" class="md-nav__link">
+    captn db from-s3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-ls" class="md-nav__link">
+    captn db ls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-rm" class="md-nav__link">
+    captn db rm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-tag" class="md-nav__link">
+    captn db tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-db-to-datasource" class="md-nav__link">
+    captn db to-datasource
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captn-ds" class="md-nav__link">
+    captn ds
+  </a>
+  
+    <nav class="md-nav" aria-label="captn ds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-details" class="md-nav__link">
+    captn ds details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-dtypes" class="md-nav__link">
+    captn ds dtypes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-head" class="md-nav__link">
+    captn ds head
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-ls" class="md-nav__link">
+    captn ds ls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-rm" class="md-nav__link">
+    captn ds rm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-tag" class="md-nav__link">
+    captn ds tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-ds-train" class="md-nav__link">
+    captn ds train
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captn-token" class="md-nav__link">
+    captn token
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captn-user" class="md-nav__link">
+    captn user
+  </a>
+  
+    <nav class="md-nav" aria-label="captn user">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-create" class="md-nav__link">
+    captn user create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-details" class="md-nav__link">
+    captn user details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-disable" class="md-nav__link">
+    captn user disable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-enable" class="md-nav__link">
+    captn user enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-ls" class="md-nav__link">
+    captn user ls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-mfa" class="md-nav__link">
+    captn user mfa
+  </a>
+  
+    <nav class="md-nav" aria-label="captn user mfa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-mfa-disable" class="md-nav__link">
+    captn user mfa disable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-mfa-enable" class="md-nav__link">
+    captn user mfa enable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-register-phone-number" class="md-nav__link">
+    captn user register-phone-number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-reset-password" class="md-nav__link">
+    captn user reset-password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-sso" class="md-nav__link">
+    captn user sso
+  </a>
+  
+    <nav class="md-nav" aria-label="captn user sso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-sso-disable" class="md-nav__link">
+    captn user sso disable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-sso-enable" class="md-nav__link">
+    captn user sso enable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#captn-user-update" class="md-nav__link">
+    captn user update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captn-version" class="md-nav__link">
+    captn version
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="captn"><code>captn</code><a class="headerlink" href="#captn" title="Permanent link">¤</a></h1>
+<p>CLI for interfacing with Capt’n.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--install-completion</code>: Install completion for the current shell.</li>
+<li><code>--show-completion</code>: Show completion for the current shell, to copy it or customize the installation.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>api-key</code>: A set of commands for managing the ApiKeys...</li>
+<li><code>db</code>: A set of commands for importing and...</li>
+<li><code>ds</code>: A set of commands for managing datasources...</li>
+<li><code>token</code>: Get application token for captn service...</li>
+<li><code>user</code>: A set of commands for managing users and...</li>
+<li><code>version</code>: Return the server and client versions.</li>
+</ul>
+<h2 id="captn-api-key"><code>captn api-key</code><a class="headerlink" href="#captn-api-key" title="Permanent link">¤</a></h2>
+<p>A set of commands for managing the ApiKeys in the server.</p>
+<p>Both the ApiKey and the token can be used for accessing the captn services. However, there is a 
+slight difference in generating and managing the two.</p>
+<p>For generating the ApiKey, you first need to get the developer token. Please refer to <strong>captn token</strong> command documentation to generate one.</p>
+<p>After logging in with your developer token, you can create any number of new ApiKeys and can set an 
+expiration date individually. You can also access other commands available as part of <strong>captn api-key</strong> sub-command to 
+list, revoke the ApiKeys at any time.</p>
+<p>Once the new API key is generated, please set it in the <strong>CAPTN_SERVICE_TOKEN</strong> environment variable to start accessing the captn services with it.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>api-key<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>create</code>: Create a new ApiKey</li>
+<li><code>details</code>: Get the details of an ApiKey.</li>
+<li><code>ls</code>: Get the list of ApiKeys.</li>
+<li><code>revoke</code>: Revoke one or more ApiKeys</li>
+</ul>
+<h3 id="captn-api-key-create"><code>captn api-key create</code><a class="headerlink" href="#captn-api-key-create" title="Permanent link">¤</a></h3>
+<p>Create a new ApiKey</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>
+<p>The name of the ApiKey must be unique. If not, an exception will be raised while creating a new key with an existing key's name.</p>
+</li>
+<li>
+<p>The expiry for an ApiKey is optional. If not passed, then the default value None will be used to create an ApiKey with no expiry date!</p>
+</li>
+</ul>
+</div>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>api-key<span class="w"> </span>create<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>NAME
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>NAME</code>: The name of the ApiKey.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-e, --expiry INTEGER</code>: The validity of the API key in number of days. If not passed, then the default value None will be used to create an ApiKey with no expiry date!</li>
+<li><code>--otp TEXT</code>: Dynamically generated six-digit verification code from the authenticator app. Please pass this optional argument only if the MFA is enabled for your account.</li>
+<li><code>-q, --quiet</code>: Output access token only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-api-key-details"><code>captn api-key details</code><a class="headerlink" href="#captn-api-key-details" title="Permanent link">¤</a></h3>
+<p>Get the details of an ApiKey.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>api-key<span class="w"> </span>details<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>APIKEY
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>APIKEY</code>: ApiKey uuid/name.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-api-key-ls"><code>captn api-key ls</code><a class="headerlink" href="#captn-api-key-ls" title="Permanent link">¤</a></h3>
+<p>Get the list of ApiKeys.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>api-key<span class="w"> </span>ls<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-u, --user TEXT</code>: user_uuid/username associated with the ApiKey. To get the user account uuid/username, use the <code>captn user details</code> command. If the user_uuid/username is not passed, then the currently logged-in user_uuid/username will be used.</li>
+<li><code>-o, --offset INTEGER</code>: The number of ApiKeys to offset at the beginning. If None, then the default value 0 will be used.  [default: 0]</li>
+<li><code>-l, --limit INTEGER</code>: The maximum number of ApiKeys to return from the server. If None, then the default value 100 will be used.  [default: 100]</li>
+<li><code>--disabled</code>: If set to <strong>True</strong>, then the disabled ApiKeys will also be included in the result.</li>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-q, --quiet</code>: Output only ApiKey uuids.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-api-key-revoke"><code>captn api-key revoke</code><a class="headerlink" href="#captn-api-key-revoke" title="Permanent link">¤</a></h3>
+<p>Revoke one or more ApiKeys</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>api-key<span class="w"> </span>revoke<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>KEYS...
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>KEYS...</code>: ApiKey uuid/name to revoke. To revoke multiple keys, please pass the uuids/names separated by space.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--user TEXT</code>: user_uuid/username associated with the ApiKey. To get the user account uuid/username, use the <code>captn user details</code> command. If the user_uuid/username is not passed, then the currently logged-in user_uuid/username will be used.</li>
+<li><code>--otp TEXT</code>: Dynamically generated six-digit verification code from the authenticator app. Please pass this optional argument only if the MFA is enabled for your account.</li>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-q, --quiet</code>: Output only the revoked ApiKey uuid(s).</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="captn-db"><code>captn db</code><a class="headerlink" href="#captn-db" title="Permanent link">¤</a></h2>
+<p>A set of commands for importing and processing data from sources such as CSV/parquet files, databases, AWS S3 buckets, and Azure Blob Storage.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>db<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>details</code>: Return details of a datablob.</li>
+<li><code>from-azure-blob-storage</code>: Create and return a datablob that...</li>
+<li><code>from-clickhouse</code>: Create and return a datablob that...</li>
+<li><code>from-local</code>: Create and return a datablob from local...</li>
+<li><code>from-mysql</code>: Create and return a datablob that...</li>
+<li><code>from-s3</code>: Create and return a datablob that...</li>
+<li><code>ls</code>: Return the list of datablobs.</li>
+<li><code>rm</code>: Delete a datablob from the server.</li>
+<li><code>tag</code>: Tag an existing datablob in the server.</li>
+<li><code>to-datasource</code>: Process the datablob and return a...</li>
+</ul>
+<h3 id="captn-db-details"><code>captn db details</code><a class="headerlink" href="#captn-db-details" title="Permanent link">¤</a></h3>
+<p>Return details of a datablob.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>db<span class="w"> </span>details<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>UUID
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>UUID</code>: Datablob uuid.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-db-from-azure-blob-storage"><code>captn db from-azure-blob-storage</code><a class="headerlink" href="#captn-db-from-azure-blob-storage" title="Permanent link">¤</a></h3>
+<p>Create and return a datablob that encapsulates the data from an Azure Blob Storage.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>db<span class="w"> </span>from-azure-blob-storage<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>URI
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>URI</code>: Azure Blob Storage URI of the source file.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-c, --credential TEXT</code>: Credential to access the Azure Blob Storage.  [required]</li>
+<li><code>-cp, --cloud-provider TEXT</code>: The destination cloud storage provider's name to store the datablob. Currently, the API only supports <strong>aws</strong> and <strong>azure</strong> as cloud storage providers. If <strong>None</strong> (default value), then <strong>azure</strong>  will be used as the cloud storage provider.</li>
+<li><code>-r, --region TEXT</code>: The destination cloud provider's region to save your datablob. If <strong>None</strong> (default value) then the default region will be assigned based on the cloud provider. In the case of <strong>aws</strong>, <strong>eu-west-1</strong> will be used and in the case of <strong>azure</strong>, <strong>westeurope</strong> will be used. The supported AWS regions are: ap-northeast-1, ap-northeast-2, ap-south-1, ap-southeast-1, ap-southeast-2, ca-central-1, eu-central-1, eu-north-1, eu-west-1, eu-west-2, eu-west-3, sa-east-1, us-east-1, us-east-2, us-west-1, us-west-2. The supported Azure Blob Storage regions are: australiacentral, australiacentral2, australiaeast, australiasoutheast, brazilsouth, canadacentral, canadaeast, centralindia, centralus, eastasia, eastus, eastus2, francecentral, francesouth, germanynorth, germanywestcentral, japaneast, japanwest, koreacentral, koreasouth, northcentralus, northeurope, norwayeast, norwaywest, southafricanorth, southafricawest, southcentralus, southeastasia, southindia, switzerlandnorth, switzerlandwest, uaecentral, uaenorth, uksouth, ukwest, westcentralus, westeurope, westindia, westus, westus2.</li>
+<li><code>-t, --tag TEXT</code>: A string to tag the datablob. If not passed, then the tag <strong>latest</strong> will be assigned to the datablob.</li>
+<li><code>-q, --quiet</code>: Output datablob uuid only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-db-from-clickhouse"><code>captn db from-clickhouse</code><a class="headerlink" href="#captn-db-from-clickhouse" title="Permanent link">¤</a></h3>
+<p>Create and return a datablob that encapsulates the data from a ClickHouse database.</p>
+<p>If the database requires authentication, pass the username/password as commandline arguments or store it in
+the <strong>CLICKHOUSE_USERNAME</strong> and <strong>CLICKHOUSE_PASSWORD</strong> environment variables.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>db<span class="w"> </span>from-clickhouse<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--host TEXT</code>: Remote database host name.  [required]</li>
+<li><code>--database TEXT</code>: Database name.  [required]</li>
+<li><code>--table TEXT</code>: Table name.  [required]</li>
+<li><code>--protocol TEXT</code>: Protocol to use. The valid values are "native" and "http".  [required]</li>
+<li><code>--index-column TEXT</code>: The column to use as index (row labels).  [required]</li>
+<li><code>--timestamp-column TEXT</code>: Timestamp column name in the tabel.  [required]</li>
+<li><code>--port INTEGER</code>: Host port number. If not passed, then the default value <strong>0</strong> will be used.  [default: 0]</li>
+<li><code>-cp, --cloud-provider TEXT</code>: The destination cloud storage provider's name to store the datablob. Currently, the API only supports <strong>aws</strong> and <strong>azure</strong> as cloud storage providers. If <strong>None</strong> (default value), then <strong>aws</strong>  will be used as the cloud storage provider.</li>
+<li><code>-r, --region TEXT</code>: The destination cloud provider's region to save your datablob. If <strong>None</strong> (default value) then the default region will be assigned based on the cloud provider. In the case of <strong>aws</strong>, <strong>eu-west-1</strong> will be used and in the case of <strong>azure</strong>, <strong>westeurope</strong> will be used. The supported AWS regions are: ap-northeast-1, ap-northeast-2, ap-south-1, ap-southeast-1, ap-southeast-2, ca-central-1, eu-central-1, eu-north-1, eu-west-1, eu-west-2, eu-west-3, sa-east-1, us-east-1, us-east-2, us-west-1, us-west-2. The supported Azure Blob Storage regions are: australiacentral, australiacentral2, australiaeast, australiasoutheast, brazilsouth, canadacentral, canadaeast, centralindia, centralus, eastasia, eastus, eastus2, francecentral, francesouth, germanynorth, germanywestcentral, japaneast, japanwest, koreacentral, koreasouth, northcentralus, northeurope, norwayeast, norwaywest, southafricanorth, southafricawest, southcentralus, southeastasia, southindia, switzerlandnorth, switzerlandwest, uaecentral, uaenorth, uksouth, ukwest, westcentralus, westeurope, westindia, westus, westus2.</li>
+<li><code>-u, --username TEXT</code>: Database username. If not passed, the default value 'root' will be used unless the value is explicitly set in the environment variable <strong>CLICKHOUSE_USERNAME</strong>.</li>
+<li><code>-p, --password TEXT</code>: Database password. If not passed, the default value '' will be used unless the value is explicitly set in the environment variable <strong>CLICKHOUSE_PASSWORD</strong>.</li>
+<li><code>-f, --filters-json TEXT</code>: Additional parameters to be used when importing data. For example, if you want to filter and extract data only for a specific user_id, pass '{"user_id": 1}'.</li>
+<li><code>-t, --tag TEXT</code>: A string to tag the datablob. If not passed, then the tag <strong>latest</strong> will be assigned to the datablob.</li>
+<li><code>-q, --quiet</code>: Output datablob uuid only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-db-from-local"><code>captn db from-local</code><a class="headerlink" href="#captn-db-from-local" title="Permanent link">¤</a></h3>
+<p>Create and return a datablob from local csv file.</p>
+<p>The API currently allows users to create datablobs from CSV or Parquet files. We intend to support additional file formats in future releases.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>db<span class="w"> </span>from-local<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-p, --path TEXT</code>: The relative or absolute path to a local CSV/parquet file or to a directory containing the CSV/parquet files.  [required]</li>
+<li><code>-cp, --cloud-provider TEXT</code>: The destination cloud storage provider's name to store the datablob. Currently, the API only supports <strong>aws</strong> and <strong>azure</strong> as cloud storage providers. If <strong>None</strong> (default value), then <strong>aws</strong>  will be used as the cloud storage provider.</li>
+<li><code>-r, --region TEXT</code>: The destination cloud provider's region to save your datablob. If <strong>None</strong> (default value) then the default region will be assigned based on the cloud provider. In the case of <strong>aws</strong>, <strong>eu-west-1</strong> will be used and in the case of <strong>azure</strong>, <strong>westeurope</strong> will be used. The supported AWS regions are: ap-northeast-1, ap-northeast-2, ap-south-1, ap-southeast-1, ap-southeast-2, ca-central-1, eu-central-1, eu-north-1, eu-west-1, eu-west-2, eu-west-3, sa-east-1, us-east-1, us-east-2, us-west-1, us-west-2. The supported Azure Blob Storage regions are: australiacentral, australiacentral2, australiaeast, australiasoutheast, brazilsouth, canadacentral, canadaeast, centralindia, centralus, eastasia, eastus, eastus2, francecentral, francesouth, germanynorth, germanywestcentral, japaneast, japanwest, koreacentral, koreasouth, northcentralus, northeurope, norwayeast, norwaywest, southafricanorth, southafricawest, southcentralus, southeastasia, southindia, switzerlandnorth, switzerlandwest, uaecentral, uaenorth, uksouth, ukwest, westcentralus, westeurope, westindia, westus, westus2.</li>
+<li><code>-t, --tag TEXT</code>: A string to tag the datablob. If not passed, then the tag <strong>latest</strong> will be assigned to the datablob.</li>
+<li><code>-q, --quiet</code>: Output data id only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-db-from-mysql"><code>captn db from-mysql</code><a class="headerlink" href="#captn-db-from-mysql" title="Permanent link">¤</a></h3>
+<p>Create and return a datablob that encapsulates the data from a mysql database.</p>
+<p>If the database requires authentication, pass the username/password as commandline arguments or store it in
+the <strong>CAPTN_CLIENT_DB_USERNAME</strong> and <strong>CAPTN_CLIENT_DB_PASSWORD</strong> environment variables.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>db<span class="w"> </span>from-mysql<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--host TEXT</code>: Remote database host name.  [required]</li>
+<li><code>--database TEXT</code>: Database name.  [required]</li>
+<li><code>--table TEXT</code>: Table name.  [required]</li>
+<li><code>--port INTEGER</code>: Host port number. If not passed, then the default value <strong>3306</strong> will be used.  [default: 3306]</li>
+<li><code>-cp, --cloud-provider TEXT</code>: The destination cloud storage provider's name to store the datablob. Currently, the API only supports <strong>aws</strong> and <strong>azure</strong> as cloud storage providers. If <strong>None</strong> (default value), then <strong>aws</strong>  will be used as the cloud storage provider.</li>
+<li><code>-r, --region TEXT</code>: The destination cloud provider's region to save your datablob. If <strong>None</strong> (default value) then the default region will be assigned based on the cloud provider. In the case of <strong>aws</strong>, <strong>eu-west-1</strong> will be used and in the case of <strong>azure</strong>, <strong>westeurope</strong> will be used. The supported AWS regions are: ap-northeast-1, ap-northeast-2, ap-south-1, ap-southeast-1, ap-southeast-2, ca-central-1, eu-central-1, eu-north-1, eu-west-1, eu-west-2, eu-west-3, sa-east-1, us-east-1, us-east-2, us-west-1, us-west-2. The supported Azure Blob Storage regions are: australiacentral, australiacentral2, australiaeast, australiasoutheast, brazilsouth, canadacentral, canadaeast, centralindia, centralus, eastasia, eastus, eastus2, francecentral, francesouth, germanynorth, germanywestcentral, japaneast, japanwest, koreacentral, koreasouth, northcentralus, northeurope, norwayeast, norwaywest, southafricanorth, southafricawest, southcentralus, southeastasia, southindia, switzerlandnorth, switzerlandwest, uaecentral, uaenorth, uksouth, ukwest, westcentralus, westeurope, westindia, westus, westus2.</li>
+<li><code>-u, --username TEXT</code>: Database username. If not passed, the default value "root" will be used unless the value is explicitly set in the environment variable <strong>CAPTN_CLIENT_DB_USERNAME</strong>.</li>
+<li><code>-p, --password TEXT</code>: Database password. If not passed, the default value "" will be used unless the value is explicitly set in the environment variable <strong>CAPTN_CLIENT_DB_PASSWORD</strong>.</li>
+<li><code>-t, --tag TEXT</code>: A string to tag the datablob. If not passed, then the tag <strong>latest</strong> will be assigned to the datablob.</li>
+<li><code>-q, --quiet</code>: Output datablob uuid only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-db-from-s3"><code>captn db from-s3</code><a class="headerlink" href="#captn-db-from-s3" title="Permanent link">¤</a></h3>
+<p>Create and return a datablob that encapsulates the data from an AWS S3 bucket.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>db<span class="w"> </span>from-s3<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>URI
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>URI</code>: The AWS S3 bucket uri.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--access-key TEXT</code>: Access key for the S3 bucket. If <strong>None</strong> (default value), then the value from <strong>AWS_ACCESS_KEY_ID</strong> environment variable is used.</li>
+<li><code>--secret-key TEXT</code>: Secret key for the S3 bucket. If <strong>None</strong> (default value), then the value from <strong>AWS_SECRET_ACCESS_KEY</strong> environment variable is used.</li>
+<li><code>-cp, --cloud-provider TEXT</code>: The destination cloud storage provider's name to store the datablob. Currently, the API only supports <strong>aws</strong> and <strong>azure</strong> as cloud storage providers. If <strong>None</strong> (default value), then <strong>aws</strong>  will be used as the cloud storage provider.</li>
+<li><code>-r, --region TEXT</code>: The destination cloud provider's region to save your datablob. If <strong>None</strong> (default value) then the default region will be assigned based on the cloud provider. In the case of <strong>aws</strong>, the datablob's source bucket region will be used and in the case of <strong>azure</strong>, <strong>westeurope</strong> will be used. The supported AWS regions are: ap-northeast-1, ap-northeast-2, ap-south-1, ap-southeast-1, ap-southeast-2, ca-central-1, eu-central-1, eu-north-1, eu-west-1, eu-west-2, eu-west-3, sa-east-1, us-east-1, us-east-2, us-west-1, us-west-2. The supported Azure Blob Storage regions are: australiacentral, australiacentral2, australiaeast, australiasoutheast, brazilsouth, canadacentral, canadaeast, centralindia, centralus, eastasia, eastus, eastus2, francecentral, francesouth, germanynorth, germanywestcentral, japaneast, japanwest, koreacentral, koreasouth, northcentralus, northeurope, norwayeast, norwaywest, southafricanorth, southafricawest, southcentralus, southeastasia, southindia, switzerlandnorth, switzerlandwest, uaecentral, uaenorth, uksouth, ukwest, westcentralus, westeurope, westindia, westus, westus2.</li>
+<li><code>-t, --tag TEXT</code>: A string to tag the datablob. If not passed, then the tag <strong>latest</strong> will be assigned to the datablob.</li>
+<li><code>-q, --quiet</code>: Output datablob uuid only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-db-ls"><code>captn db ls</code><a class="headerlink" href="#captn-db-ls" title="Permanent link">¤</a></h3>
+<p>Return the list of datablobs.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>db<span class="w"> </span>ls<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-o, --offset INTEGER</code>: The number of datablobs to offset at the beginning. If <strong>None</strong>, then the default value <strong>0</strong> will be used.  [default: 0]</li>
+<li><code>-l, --limit INTEGER</code>: The maximum number of datablobs to return from the server. If <strong>None</strong>, then the default value <strong>100</strong> will be used.  [default: 100]</li>
+<li><code>--disabled</code>: If set to <strong>True</strong>, then only the deleted datablobs will be returned.Else, the default value <strong>False</strong> will be used to return only the listof active datablobs.</li>
+<li><code>--completed</code>: If set to <strong>True</strong>, then only the datablobs that are successfully downloadedto the server will be returned. Else, the default value <strong>False</strong> will be used toreturn all the datablobs.</li>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-q, --quiet</code>: Output only datablob uuids separated by space</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-db-rm"><code>captn db rm</code><a class="headerlink" href="#captn-db-rm" title="Permanent link">¤</a></h3>
+<p>Delete a datablob from the server.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>db<span class="w"> </span>rm<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>UUID
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>UUID</code>: Datablob uuid.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-q, --quiet</code>: Output the deleted datablob uuid only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-db-tag"><code>captn db tag</code><a class="headerlink" href="#captn-db-tag" title="Permanent link">¤</a></h3>
+<p>Tag an existing datablob in the server.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>db<span class="w"> </span>tag<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-uuid, --datablob_uuid TEXT</code>: Datablob uuid in the server.  [required]</li>
+<li><code>-n, --name TEXT</code>: A string to tag the datablob.  [required]</li>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-db-to-datasource"><code>captn db to-datasource</code><a class="headerlink" href="#captn-db-to-datasource" title="Permanent link">¤</a></h3>
+<p>Process the datablob and return a datasource object.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>db<span class="w"> </span>to-datasource<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--uuid TEXT</code>: Datablob uuid.  [required]</li>
+<li><code>--file-type TEXT</code>: The file type of the datablob. Currently, the API only supports "csv" and "parquet" as file types.  [required]</li>
+<li><code>--index-column TEXT</code>: The column to use as index (row labels).  [required]</li>
+<li><code>--sort-by TEXT</code>: The column(s) to sort the data. Can either be a string or a JSON encoded list of strings.  [required]</li>
+<li><code>--deduplicate-data / --no-deduplicate-data</code>: If set to <strong>True</strong> (default value <strong>False</strong>), the datasource will be created with duplicate rows removed.  [default: no-deduplicate-data]</li>
+<li><code>--blocksize TEXT</code>: The number of bytes used to split larger files. If None, then the default value <strong>256MB</strong> will be used.  [default: 256MB]</li>
+<li><code>--kwargs-json TEXT</code>: Additional JSON encoded dict arguments to use while processing the data.e.g: To skip 100 lines from the bottom of file, pass '{"skipfooter": 100}'</li>
+<li><code>-q, --quiet</code>: Output datasource uuid only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="captn-ds"><code>captn ds</code><a class="headerlink" href="#captn-ds" title="Permanent link">¤</a></h2>
+<p>A set of commands for managing datasources and training ML models on them.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>ds<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>details</code>: Return details of a datasource.</li>
+<li><code>dtypes</code>: Return the dtypes of the datasource.</li>
+<li><code>head</code>: Return the first few rows of the datasource.</li>
+<li><code>ls</code>: Return the list of datasources.</li>
+<li><code>rm</code>: Delete a datasource from the server.</li>
+<li><code>tag</code>: Tag an existing datasource in server.</li>
+<li><code>train</code>: Train a model against the datasource.</li>
+</ul>
+<h3 id="captn-ds-details"><code>captn ds details</code><a class="headerlink" href="#captn-ds-details" title="Permanent link">¤</a></h3>
+<p>Return details of a datasource.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>ds<span class="w"> </span>details<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>UUID
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>UUID</code>: Datasource uuid.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-ds-dtypes"><code>captn ds dtypes</code><a class="headerlink" href="#captn-ds-dtypes" title="Permanent link">¤</a></h3>
+<p>Return the dtypes of the datasource.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>ds<span class="w"> </span>dtypes<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>UUID
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>UUID</code>: Datasource uuid.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-ds-head"><code>captn ds head</code><a class="headerlink" href="#captn-ds-head" title="Permanent link">¤</a></h3>
+<p>Return the first few rows of the datasource.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>ds<span class="w"> </span>head<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>UUID
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>UUID</code>: Datasource uuid.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-ds-ls"><code>captn ds ls</code><a class="headerlink" href="#captn-ds-ls" title="Permanent link">¤</a></h3>
+<p>Return the list of datasources.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>ds<span class="w"> </span>ls<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-o, --offset INTEGER</code>: The number of datasources to offset at the beginning. If <strong>None</strong>, then the default value <strong>0</strong> will be used.  [default: 0]</li>
+<li><code>-l, --limit INTEGER</code>: The maximum number of datasources to return from the server. If <strong>None</strong>, then the default value <strong>100</strong> will be used.  [default: 100]</li>
+<li><code>--disabled</code>: If set to <strong>True</strong>, then only the deleted datasources will be returned.Else, the default value <strong>False</strong> will be used to return only the listof active datasources.</li>
+<li><code>--completed</code>: If set to <strong>True</strong>, then only the datasources that are successfully downloadedto the server will be returned. Else, the default value <strong>False</strong> will be used toreturn all the datasources.</li>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-q, --quiet</code>: Output only datasource uuids separated by space</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-ds-rm"><code>captn ds rm</code><a class="headerlink" href="#captn-ds-rm" title="Permanent link">¤</a></h3>
+<p>Delete a datasource from the server.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>ds<span class="w"> </span>rm<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>UUID
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>UUID</code>: Datasource uuid.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-q, --quiet</code>: Output the deleted datasource uuid only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-ds-tag"><code>captn ds tag</code><a class="headerlink" href="#captn-ds-tag" title="Permanent link">¤</a></h3>
+<p>Tag an existing datasource in server.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>ds<span class="w"> </span>tag<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-uuid, --datasource_uuid TEXT</code>: Datasource uuid.  [required]</li>
+<li><code>-n, --name TEXT</code>: A string to tag the datasource.  [required]</li>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-ds-train"><code>captn ds train</code><a class="headerlink" href="#captn-ds-train" title="Permanent link">¤</a></h3>
+<p>Train a model against the datasource.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>ds<span class="w"> </span>train<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-uuid, --datasource_uuid TEXT</code>: Datasource uuid.  [required]</li>
+<li><code>--client_column TEXT</code>: The column name that uniquely identifies the users/clients.  [required]</li>
+<li><code>--timestamp_column TEXT</code>: The timestamp column indicating the time of an event. If not passed, then the default value <strong>None</strong> will be used. </li>
+<li><code>--target_column TEXT</code>: Target column name that indicates the type of the event.  [required]</li>
+<li><code>--target TEXT</code>: Target event name to train and make predictions. You can pass the target event as a string or as a regular expression for predicting more than one event. For example, passing <strong>*checkout</strong> will train a model to predict any checkout event.  [required]</li>
+<li><code>--predict_after TEXT</code>: Time delta in hours of the expected target event.  [required]</li>
+<li><code>-q, --quiet</code>: Output model uuid only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="captn-token"><code>captn token</code><a class="headerlink" href="#captn-token" title="Permanent link">¤</a></h2>
+<p>Get application token for captn service from a username/password pair.</p>
+<p>To access the captn service, you must first create a developer account. To obtain one, please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#99;&#97;&#112;&#116;&#110;&#46;&#97;&#105;">&#105;&#110;&#102;&#111;&#64;&#99;&#97;&#112;&#116;&#110;&#46;&#97;&#105;</a>.</p>
+<p>After successful verification, you will receive an email with the username and password for the developer account.</p>
+<p>Once you have the credentials, use them to get an access token by running <strong>captn token</strong> command. It is necessary to
+get an access token; otherwise, you won't be able to access all of the captn service's APIs. You can either pass the
+username, password, and server address as command line arguments or store them in the environment variables
+<strong>CAPTN_SERVICE_USERNAME</strong>, <strong>CAPTN_SERVICE_PASSWORD</strong>, and <strong>CAPTN_SERVER_URL</strong>.</p>
+<p>If you've already enabled multi-factor authentication (MFA) for your account, you'll need to pass the dynamically
+generated six-digit verification code along with your username and password to generate new tokens.</p>
+<p>If the token is requested using Single sign-on (SSO), an authorization URL will be returned. Please copy and paste
+it into your preferred browser and complete the SSO provider authentication within 10 minutes. Otherwise,
+the SSO login will time out and you will need to re-request the token.</p>
+<p>Single sign-on (SSO) can be enabled for your account in three simple steps:</p>
+<ol>
+<li>
+<p>Enable the SSO for a provider by calling the command <code>captn user sso enable</code> with the SSO provider name and an email address.
+At the moment, we only support "google" and "github" as SSO providers. We intend to support additional SSO providers in future releases.</p>
+</li>
+<li>
+<p>Before you can start generating new tokens with SSO, you must first authenticate with the SSO provider. Call the <code>captn token</code> command with
+the same SSO provider you have enabled in the step above to generate an SSO authorization URL. Please copy and paste it into your
+preferred browser and complete the authentication process with the SSO provider.</p>
+</li>
+<li>
+<p>After successfully authenticating with the SSO provider, an access token will be generated and returned. Please set it in the
+<strong>CAPTN_SERVICE_TOKEN</strong> environment variable for accessing the captn service.</p>
+</li>
+</ol>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>token<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-u, --username TEXT</code>: Username for the developer account. If None (default value), then the value from <strong>CAPTN_SERVICE_USERNAME</strong> environment variable is used.</li>
+<li><code>-p, --password TEXT</code>: Password for the developer account. If None (default value), then the value from <strong>CAPTN_SERVICE_PASSWORD</strong> environment variable is used.</li>
+<li><code>-s, --server TEXT</code>: The captn server uri. If None (default value), then the value from <strong>CAPTN_SERVER_URL</strong> environment variable is used. If the variable is not set as well, then the default public server will be used. Please leave this setting to default unless you are running the service in your own server (please email us to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#99;&#97;&#112;&#116;&#110;&#46;&#97;&#105;">&#105;&#110;&#102;&#111;&#64;&#99;&#97;&#112;&#116;&#110;&#46;&#97;&#105;</a> for that possibility).</li>
+<li><code>--otp TEXT</code>: Dynamically generated six-digit verification code from the authenticator app or the OTP you have received via SMS. Please do not pass this parameter if you haven't enabled the multi-factor authentication for your account.</li>
+<li><code>-sp, --sso_provider TEXT</code>: Name of the Single sign-on (SSO) provider. At the moment, we only support google and github as SSO providers. Please pass this parameter only if you have successfully enabled SSO for the provider.</li>
+<li><code>-q, --quiet</code>: Output authentication token only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="captn-user"><code>captn user</code><a class="headerlink" href="#captn-user" title="Permanent link">¤</a></h2>
+<p>A set of commands for managing users and their authentication in the server.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>create</code>: Create a new user in the server.</li>
+<li><code>details</code>: Get user details</li>
+<li><code>disable</code>: Disable a user in the server.</li>
+<li><code>enable</code>: Enable a disabled user in the server.</li>
+<li><code>ls</code>: Return the list of users available in the...</li>
+<li><code>mfa</code>: Commands for enabling and disabling...</li>
+<li><code>register-phone-number</code>: Register and validate a phone number</li>
+<li><code>reset-password</code>: Reset the account password</li>
+<li><code>sso</code>: Commands for enabling and disabling Single...</li>
+<li><code>update</code>: Update existing user details in the server.</li>
+</ul>
+<h3 id="captn-user-create"><code>captn user create</code><a class="headerlink" href="#captn-user-create" title="Permanent link">¤</a></h3>
+<p>Create a new user in the server.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span>create<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-un, --username TEXT</code>: The new user's username. The username must be unique or an exception will be thrown.  [required]</li>
+<li><code>-fn, --first_name TEXT</code>: The new user's first name.  [required]</li>
+<li><code>-ln, --last_name TEXT</code>: The new user's last name.  [required]</li>
+<li><code>-e, --email TEXT</code>: The new user's email. The email must be unique or an exception will be thrown.  [required]</li>
+<li><code>-p, --password TEXT</code>: The new user's password.  [required]</li>
+<li><code>-st, --subscription_type TEXT</code>: User subscription type. Currently, the API supports only the following subscription types <strong>small</strong>, <strong>medium</strong> and <strong>large</strong>.  [required]</li>
+<li><code>-su, --super_user</code>: If set to <strong>True</strong>, then the new user will have super user privilages. If <strong>None</strong>, then the default value <strong>False</strong> will be used to create a non-super user.</li>
+<li><code>-ph, --phone_number TEXT</code>: Phone number to be added to the user account. The phone number should follow the pattern of the country code followed by your phone number. For example, 440123456789, +440123456789, 00440123456789, +44 0123456789,and (+44) 012 345 6789 are all valid formats for registering a UK phone number.</li>
+<li><code>--otp TEXT</code>: Dynamically generated six-digit verification code from the authenticator app. Please pass this optional argument only if you have activated the MFA for your account.</li>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-q, --quiet</code>: Output user uuid only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-user-details"><code>captn user details</code><a class="headerlink" href="#captn-user-details" title="Permanent link">¤</a></h3>
+<p>Get user details</p>
+<p>Please do not pass the optional 'user' option unless you are a super user. Only a super user can view details for other users.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span>details<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-u, --user TEXT</code>: Account user_uuid/username to get details. If not passed, then the currently logged-in details will be returned.</li>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-q, --quiet</code>: Output user uuid only.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-user-disable"><code>captn user disable</code><a class="headerlink" href="#captn-user-disable" title="Permanent link">¤</a></h3>
+<p>Disable a user in the server.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span>disable<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>USERS...
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>USERS...</code>: user_uuid/username to disabled.  To disable multiple users, please pass the uuids/names separated by space.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--otp TEXT</code>: Dynamically generated six-digit verification code from the authenticator app. Please pass this optional argument only if you have activated the MFA for your account.</li>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-q, --quiet</code>: Output user uuid only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-user-enable"><code>captn user enable</code><a class="headerlink" href="#captn-user-enable" title="Permanent link">¤</a></h3>
+<p>Enable a disabled user in the server.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>USERS...
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>USERS...</code>: user_uuid/username to enable. To enable multiple users, please pass the uuids/names separated by space.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--otp TEXT</code>: Dynamically generated six-digit verification code from the authenticator app. Please pass this optional argument only if you have activated the MFA for your account.</li>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-q, --quiet</code>: Output user uuid only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-user-ls"><code>captn user ls</code><a class="headerlink" href="#captn-user-ls" title="Permanent link">¤</a></h3>
+<p>Return the list of users available in the server.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span>ls<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-o, --offset INTEGER</code>: The number of users to offset at the beginning. If <strong>None</strong>, then the default value <strong>0</strong> will be used.  [default: 0]</li>
+<li><code>-l, --limit INTEGER</code>: The maximum number of users to return from the server. If None, then the default value 100 will be used.  [default: 100]</li>
+<li><code>--disabled</code>: If set to <strong>True</strong>, then only the deleted users will be returned. Else, the default value <strong>False</strong> will be used to return only the list of active users.</li>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-q, --quiet</code>: Output only user uuids separated by space</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-user-mfa"><code>captn user mfa</code><a class="headerlink" href="#captn-user-mfa" title="Permanent link">¤</a></h3>
+<p>Commands for enabling and disabling Multi-Factor Authentication (MFA).</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span>mfa<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>disable</code>: Disable Multi-Factor Authentication (MFA)...</li>
+<li><code>enable</code>: Enable Multi-Factor Authentication (MFA)...</li>
+</ul>
+<h4 id="captn-user-mfa-disable"><code>captn user mfa disable</code><a class="headerlink" href="#captn-user-mfa-disable" title="Permanent link">¤</a></h4>
+<p>Disable Multi-Factor Authentication (MFA) for the user.</p>
+<p>The command switches to interactive mode unless the OTP argument is passed. The interactive mode will prompt you to
+choose an OTP option you want to use. Currently, we only support disabling MFA either using a TOTP or SMS OTP.</p>
+<p>If you have access to the authenticator application, then you can either enter the dynamically generated six-digit
+verification code from the authenticator app (TOTP) or request an OTP via SMS to your registered phone number.</p>
+<p>After selecting an option, please follow the on-screen instructions to disable MFA for your account. In case,
+you don't have access to the authenticator app and your registered phone number, please contact your administrator.</p>
+<p>Note: Please do not pass the user argument unless you are a super user. Only
+a super user can disable MFA for other users.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span>mfa<span class="w"> </span>disable<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-u, --user TEXT</code>: Account user_uuid/username to disable MFA. If not passed, then the default value None will be used to disable MFA for the currently logged-in user.</li>
+<li><code>--otp TEXT</code>: Dynamically generated six-digit verification code from the authenticator app or the OTP you have received via SMS.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h4 id="captn-user-mfa-enable"><code>captn user mfa enable</code><a class="headerlink" href="#captn-user-mfa-enable" title="Permanent link">¤</a></h4>
+<p>Enable Multi-Factor Authentication (MFA) for the user.</p>
+<p>This is an interactive command and will generate a QR code. You can use an authenticator app, such as Google Authenticator
+to scan the code and enter the valid six-digit verification code from the authenticator app in the interactive prompt to
+enable and activate MFA for your account.</p>
+<p>After three invalid attempts, you have to call this command again to generate a new QR code.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span>mfa<span class="w"> </span><span class="nb">enable</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--otp TEXT</code>: Dynamically generated six-digit verification code from the authenticator app. Please pass this optional argument only if you have activated the MFA for your account.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-user-register-phone-number"><code>captn user register-phone-number</code><a class="headerlink" href="#captn-user-register-phone-number" title="Permanent link">¤</a></h3>
+<p>Register and validate a phone number</p>
+<p>This is an interactive command, one called it will send an OTP via SMS to the phone number. Please enter the OTP you have received
+in the interactive prompt to complete the phone number registration process.</p>
+<p>After ten invalid OTP attempts, you have to call this command again to register the phone number.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span>register-phone-number<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-p, --phone-number TEXT</code>: Phone number to register. The phone number should follow the pattern of the 
+country code followed by your phone number. For example, <strong>440123456789, +440123456789,
+00440123456789, +44 0123456789, and (+44) 012 345 6789</strong> are all valid formats for registering a UK phone number.
+If the phone number is not passed in the arguments, then the OTP will be sent to the phone 
+number that was already registered to the user's account.</li>
+<li><code>--otp TEXT</code>: Dynamically generated six-digit verification code from the authenticator app. Please pass this optional argument only if you have activated the MFA for your account.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-user-reset-password"><code>captn user reset-password</code><a class="headerlink" href="#captn-user-reset-password" title="Permanent link">¤</a></h3>
+<p>Reset the account password</p>
+<div class="highlight"><pre><span></span><code>We currently support two types of OTPs to reset the password for your account and you don&#39;t have to be logged in to call this command
+</code></pre></div>
+<p>The command switches to interactive mode unless all arguments are passed. The interactive mode will prompt you for the missing details and ask you to choose a recovery option to reset your password. Currently, we only support resetting the password either using a TOTP or SMS OTP.</p>
+<p>If you have already activated the MFA for your account, then you can either enter the dynamically generated six-digit verification code from the authenticator app (TOTP) or request an OTP via SMS to your registered phone number.</p>
+<p>If the MFA is not activated already, then you can only request the OTP via SMS to your registered phone number.</p>
+<p>After selecting an option, please follow the on-screen instructions to reset your password. In case, you don't have MFA enabled or don't have access to your registered phone number, please contact your administrator.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span>reset-password<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-u, --username TEXT</code>: Account username to reset the password</li>
+<li><code>-np, --new-password TEXT</code>: New password to set for the account</li>
+<li><code>--otp TEXT</code>: Dynamically generated six-digit verification code from the authenticator app</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-user-sso"><code>captn user sso</code><a class="headerlink" href="#captn-user-sso" title="Permanent link">¤</a></h3>
+<p>Commands for enabling and disabling Single sign-on (SSO).</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span>sso<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>disable</code>: Disable Single sign-on (SSO) for the user.</li>
+<li><code>enable</code>: Enable Single sign-on (SSO) for the user</li>
+</ul>
+<h4 id="captn-user-sso-disable"><code>captn user sso disable</code><a class="headerlink" href="#captn-user-sso-disable" title="Permanent link">¤</a></h4>
+<p>Disable Single sign-on (SSO) for the user.</p>
+<p>Please do not pass the user argument unless you are a super user. Only
+a super user can disable SSO for other users.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span>sso<span class="w"> </span>disable<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>SSO_PROVIDER
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>SSO_PROVIDER</code>: Name of the Single sign-on (SSO) identity provider. At present, the API only supports Google and Github as valid SSO identity providers.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-u, --user TEXT</code>: Account user_uuid/username to disable MFA. If not passed, then the default value None will be used to disable SSO for the currently logged-in user.</li>
+<li><code>--otp TEXT</code>: Dynamically generated six-digit verification code from the authenticator app. Please pass this optional argument only if you have activated the MFA for your account.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h4 id="captn-user-sso-enable"><code>captn user sso enable</code><a class="headerlink" href="#captn-user-sso-enable" title="Permanent link">¤</a></h4>
+<p>Enable Single sign-on (SSO) for the user</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span>sso<span class="w"> </span><span class="nb">enable</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>SSO_PROVIDER
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>SSO_PROVIDER</code>: Name of the Single sign-on (SSO) identity provider. At present, the API only supports <strong>Google</strong> and <strong>Github</strong> as valid SSO identity providers.  [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>-e, --email TEXT</code>: Email id going to be used for SSO authentication.  [required]</li>
+<li><code>--otp TEXT</code>: Dynamically generated six-digit verification code from the authenticator app. Please pass this optional argument only if you have activated the MFA for your account.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="captn-user-update"><code>captn user update</code><a class="headerlink" href="#captn-user-update" title="Permanent link">¤</a></h3>
+<p>Update existing user details in the server.</p>
+<p>Please do not pass the optional user option unless you are a super user. Only a
+super user can update details for other users.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>user<span class="w"> </span>update<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--user TEXT</code>: Account user_uuid/username to update. If not passed, then the default value None will be used to update the currently logged-in user details.</li>
+<li><code>-un, --username TEXT</code>: New username for the user.</li>
+<li><code>-fn, --first_name TEXT</code>: New first name for the user.</li>
+<li><code>-ln, --last_name TEXT</code>: New last name for the user.</li>
+<li><code>-e, --email TEXT</code>: New email for the user.</li>
+<li><code>--otp TEXT</code>: Dynamically generated six-digit verification code from the authenticator app. Please pass this optional argument only if you have activated the MFA for your account.</li>
+<li><code>-f, --format TEXT</code>: Format output and show only the given column(s) values.</li>
+<li><code>-q, --quiet</code>: Output user uuid only.</li>
+<li><code>-d, --debug</code>: Set logger level to DEBUG and output everything.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="captn-version"><code>captn version</code><a class="headerlink" href="#captn-version" title="Permanent link">¤</a></h2>
+<p>Return the server and client versions.</p>
+<p><strong>Usage</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>captn<span class="w"> </span>version<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2022 onwards, airt.ai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+    and 
+    <a href="https://nbdev-mkdocs.airt.ai/" target="_blank" rel="noopener">
+      Material for nbdev
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+        <script src="../../overrides/js/extra.js"></script>
+      
+        <script src="../../overrides/js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
