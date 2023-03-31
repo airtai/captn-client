@@ -165,7 +165,7 @@ jobs:
       - run: chown -R $(id -u):$(id -g) $PWD
       - run: echo "PATH=$PATH:$HOME/.local/bin" >> $GITHUB_ENV
 
-      - run: sleep 300
+      - run: sleep 450
       - run: pip install -e ".[dev]"
 
       - name: Run test without failing
